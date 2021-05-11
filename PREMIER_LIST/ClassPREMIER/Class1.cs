@@ -8,39 +8,57 @@ namespace ClassPREMIER
 {
     public class Class1
     {
-        public static bool Nombrepremier(int _Nbutilisateur)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_nbATester"></param>
+        /// <returns></returns>
+        public static bool EstUnNombrepremier(uint _nbATester)
 
         {
             double reste;
-            int Diviseur = 2;
-            bool Premier = true;
-            double Limite = Math.Sqrt(_Nbutilisateur);
+            int diviseur = 2;
+            bool estPremier = true;
 
-            do
+            //_nbATester == 0 , il a une infinite de diviseur
+            //_nbATester == 1 , il a qu'un diviseur, lui même
+
+            if ((_nbATester == 0) || (_nbATester == 1))
             {
-                reste = _Nbutilisateur % Diviseur;
-
-                Diviseur++;
-
-                if (reste == 0 && _Nbutilisateur != 2)
+                estPremier = false;
+            }
+            else
+            {
+                while ((diviseur < _nbATester) && estPremier)
                 {
-                    Premier = false;
-                    break;                   
+                    reste = _nbATester % diviseur;
+
+                    diviseur++;
+
+                    if (reste == 0)
+                    {
+                        estPremier = false;
+
+                    }
+
                 }
-                
-
-            } while (Diviseur <= Limite);
-
-            return Premier;
+            }
+            return estPremier;
         }
-        public static List<int> GivePremier(int Nbr)
-        {
-            List<int> tab = new List<int>();
 
-            for (int i = 0; i < Nbr; i++)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nbMaximunATester"></param>
+        /// <returns></returns>
+        public static List<uint> DonneLesPremiers(uint nbMaximunATester)
+        {
+            List<uint> tab = new List<uint>();
+
+            for (uint i = 0; i <= nbMaximunATester; i++)
             {
                 
-                if (Nombrepremier(i) == true && i != 1)
+                if (EstUnNombrepremier(i) == true )
                 {
                     tab.Add(i);
                 }

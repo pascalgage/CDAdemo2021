@@ -12,13 +12,13 @@ namespace PREMIER_LIST
     {
         static void Main(string[] args)
         {
-            int nb;
+            uint nb;
             
 
             Console.WriteLine("Entrez le nombre de Premiers désirés:");
-            nb = int.Parse(Console.ReadLine());
+            nb = uint.Parse(Console.ReadLine());
 
-            List<int> r = Class1.GivePremier(nb);
+            List<uint> r = Class1.DonneLesPremiers(nb);
 
             for (int i = 0; i < r.Count; i++)
             {
