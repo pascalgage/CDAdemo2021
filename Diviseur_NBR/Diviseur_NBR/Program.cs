@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassDiviseur;
 
 namespace Diviseur_NBR
 {
@@ -14,7 +15,7 @@ namespace Diviseur_NBR
             Console.WriteLine("Entrez un nombre entier:");
             NBR = int.Parse(Console.ReadLine());
 
-            List<int> r = Diviseur(NBR);
+            List<int> r = Diviseur1.Diviseur(NBR);
 
             Console.WriteLine("Les diviseurs de " + NBR + " sont:");
 
@@ -26,22 +27,6 @@ namespace Diviseur_NBR
             Console.ReadKey();
 
         }
-        public static List<int> Diviseur(int _nbr)
-        {
-            int diviseur = 2;
-            List<int> Listing = new List<int>();
-
-            do
-            {
-                if (_nbr % diviseur == 0)
-                {
-                    Listing.Add(diviseur);
-                }
-                diviseur++;
-
-            } while (diviseur < _nbr);
-
-            return Listing;
-        }
+        
     }
 }
