@@ -10,7 +10,7 @@ namespace JEUNES
     {
         static void Main(string[] args)
         {
-            int[] jeunes = new int[20];
+            int[] jeunes = new int[5];
 
             for (int i = 0; i < jeunes.Length; i++)
             {
@@ -19,9 +19,9 @@ namespace JEUNES
             }
             int moinsdevingt = 0;
 
-            foreach(int age in jeunes)
+            for (int i = 0; i < jeunes.Length; i++)
             {
-                if (age < 20)
+                if (jeunes[i] < 20)
                 {
                     moinsdevingt++;
                 }
