@@ -15,7 +15,7 @@ namespace PREMIER_LIST
             uint nb;
             
 
-            Console.WriteLine("Entrez le nombre de Premiers désirés:");
+            Console.WriteLine("Entrez la fourchette de premiers entre 0 et : ");
             nb = uint.Parse(Console.ReadLine());
 
             List<uint> r = Class1.DonneLesPremiers(nb);
