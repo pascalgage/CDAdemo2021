@@ -19,11 +19,11 @@ namespace JEUNES
             }
             int moinsdevingt = 0; // j'initialise la variable moinsdevingt qui servira de compteur...
 
-            for (int i = 0; i < jeunes.Length; i++)
+            for (int i = 0; i < jeunes.Length; i++)// on parcoure le tableau et on repère tous les éléments inférieurs à 20
             {
                 if (jeunes[i] < 20)
                 {
-                    moinsdevingt++;
+                    moinsdevingt++; //la variable est incrémenté à chaque passage dans le if
                 }
             }
 
