@@ -14,7 +14,7 @@ namespace Diviseur_NBR
             Console.WriteLine("Entrez un nombre entier:");
             NBR = int.Parse(Console.ReadLine());
 
-            List<int> r= Diviseur(NBR);
+            List<int> r = Diviseur(NBR);
 
             Console.WriteLine("Les diviseurs de " + NBR + " sont:");
 
