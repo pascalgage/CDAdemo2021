@@ -19,7 +19,7 @@ namespace PREMIER_LIST
             nb = uint.Parse(Console.ReadLine());
 
             List<uint> r = Class1.DonneLesPremiers(nb);
-
+            Console.WriteLine("Les nombres premiers compris entre 0 et " + nb + " sont:");
             for (int i = 0; i < r.Count; i++)
             {
                 Console.WriteLine(r[i]);
