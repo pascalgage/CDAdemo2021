@@ -10,24 +10,25 @@ namespace JEUNES
     {
         static void Main(string[] args)
         {
-            int[] jeunes = new int[20]; //Déclaration du tableau de vingt personnes
+            //Déclaration du tableau de vingt personnes
+            int[] jeunes = new int[20];
 
 
-
-            for (int i = 0; i < jeunes.Length; i++) //Création du tableau par la saisie des âges
+            //Création du tableau par la saisie des âges
+            for (int i = 0; i < jeunes.Length; i++)
             {
                 Console.WriteLine("Entrez l'âge de la personne n°" + (i + 1)); //On propose de rentrer l'âge de la personne n° tel...
                 jeunes[i] = int.Parse(Console.ReadLine()); //on contrôle que les saisies soient bien des entiers positifs...
             }
 
 
-
-            int moinsdevingt = 0; // j'initialise la variable moinsdevingt qui servira de compteur...
-
-
+            // j'initialise la variable moinsdevingt qui servira de compteur...
+            int moinsdevingt = 0;
 
 
-            for (int i = 0; i < jeunes.Length; i++)// on parcoure le tableau et on repère tous les éléments inférieurs à 20
+
+            // on parcoure le tableau et on repère tous les éléments inférieurs à 20
+            for (int i = 0; i < jeunes.Length; i++)
             {
                 if (jeunes[i] < 20)
                 {
