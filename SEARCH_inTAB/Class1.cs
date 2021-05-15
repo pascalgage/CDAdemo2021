@@ -39,7 +39,12 @@ namespace SEARCH_inTAB
             }
             else
             {
-
+                resultat = "L'élément " + mot + " est présent " + compteur + " fois dans le tableau aux positions suivantes :";
+                for (int j = 0; j < position.Count; j++)
+                {
+                    resultat += position[j]+" ;";
+                }
+                resultat += " Il s'agit de doublons !!!";
             }
 
             return resultat;
