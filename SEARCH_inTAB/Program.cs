@@ -27,10 +27,15 @@ namespace SEARCH_inTAB
                 {
                     prenoms.Add(prenom);
                     compteur++;
+                    break;
                 }
+
             } while (compteur != nbreleve);
 
-
+            foreach (string item in prenoms)
+            {
+                Console.WriteLine(item);
+            }
 
             Console.ReadKey();
         }
