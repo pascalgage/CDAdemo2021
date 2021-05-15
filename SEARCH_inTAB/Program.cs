@@ -14,7 +14,7 @@ namespace SEARCH_inTAB
             string prenom = "";
             int nbreleve = 0;
             int compteur = 0;
-
+            string Xeleve = "";
 
             Console.WriteLine("Entrez le nombre d'élève de votre liste:");
             nbreleve = int.Parse(Console.ReadLine());
@@ -32,10 +32,10 @@ namespace SEARCH_inTAB
 
             } while (compteur != nbreleve);
 
-            foreach (string item in prenoms)
-            {
-                Console.WriteLine(item);
-            }
+            Console.WriteLine("Entrez le prénom recherché:");
+            Xeleve = Console.ReadLine();
+
+            Console.WriteLine(Class1.Search_inTab(prenoms, Xeleve));
 
             Console.ReadKey();
         }
