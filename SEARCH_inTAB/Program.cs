@@ -29,7 +29,7 @@ namespace SEARCH_inTAB
             {
                 do
                 {
-                    Console.WriteLine("Veuillez entrer les prénoms des vos "+(ind++)+"/" + nbreleve + " élève(s):");
+                    Console.WriteLine("Veuillez entrer le prénom de l'élève "+(ind++)+"/" + nbreleve + " :");
                     break;
                 }
                 while (ind != nbreleve);
