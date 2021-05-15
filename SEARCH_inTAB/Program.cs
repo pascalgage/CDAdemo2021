@@ -14,7 +14,7 @@ namespace SEARCH_inTAB
 
             
             string prenom = "";
-            int nbreleve = 0;
+            int nbreleve = 1;
             int compteur = 0;
             string Xeleve = "";
             
@@ -27,7 +27,13 @@ namespace SEARCH_inTAB
 
             do
             {
-                Console.WriteLine("Veuillez entrer les prénoms des vos "+nbreleve+" élève(s):");
+                
+                
+                    Console.WriteLine("Veuillez entrer les prénoms des vos "+ nbreleve + " élève(s):");
+                    
+                    
+                
+               
                 while ((prenom = Console.ReadLine()) != null)
                 {
                     prenoms.Add(prenom);

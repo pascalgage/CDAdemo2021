@@ -35,7 +35,7 @@ namespace SEARCH_inTAB
             }
             else if (compteur == 1)
             {
-                resultat= "Lélément "+mot+" est présent une seule fois dans le tableau à la position "+position[0];
+                resultat= "L'élément "+mot+" est présent une seule fois dans le tableau à la position "+position[0];
             }
             else
             {
