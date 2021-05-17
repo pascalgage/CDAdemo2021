@@ -12,23 +12,23 @@ namespace Diviseur_NBR
         static void Main(string[] args)
         {
             //On invite l'utilisateur a entrer un nombre entier positif
-            uint NBR;
+            uint nbr;
             Console.WriteLine("Entrez un nombre entier positif:");
-            NBR = uint.Parse(Console.ReadLine());
+            nbr = uint.Parse(Console.ReadLine());
 
             //Création le la liste des diviseurs du Nombre NBR....
 
-            List<uint> r = Diviseur1.Diviseur(NBR);
+            List<uint> r = Diviseur1.Diviseur(nbr);
 
             //Traitement du nombre NBR...affichage premier oui/non ou les diviseurs
 
-            if (Diviseur1.EstUnNombrepremier(NBR) == true)
+            if (Diviseur1.EstUnNombrepremier(nbr) == true)
             {
-                Console.WriteLine(+NBR + " est premier donc les diviseurs sont 1 et lui-même");
+                Console.WriteLine(+nbr + " est premier donc les diviseurs sont 1 et lui-même");
             }
             else
             {
-                Console.WriteLine("Les diviseurs de " + NBR + " sont:");
+                Console.WriteLine("Les diviseurs de " + nbr + " sont:");
 
                 for (int i = 0; i < r.Count; i++)
                 {
