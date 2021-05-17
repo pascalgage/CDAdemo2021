@@ -31,7 +31,7 @@ namespace SEARCH_inTAB
             }
             if (compteur == 0)
             {
-                resultat = "L'élément recherché" + mot + " n'existe pas dans le tableau";
+                resultat = "L'élément recherché " + mot + " n'existe pas dans le tableau";
             }
             else if (compteur == 1)
             {
