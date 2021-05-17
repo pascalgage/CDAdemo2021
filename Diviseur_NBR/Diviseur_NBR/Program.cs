@@ -11,11 +11,12 @@ namespace Diviseur_NBR
     {
         static void Main(string[] args)
         {
-            int NBR;
+            uint NBR;
             Console.WriteLine("Entrez un nombre entier:");
-            NBR = int.Parse(Console.ReadLine());
+            NBR = uint.Parse(Console.ReadLine());
 
-            List<int> r = Diviseur1.Diviseur(NBR);
+
+            List<uint> r = Diviseur1.Diviseur(NBR);
 
             Console.WriteLine("Les diviseurs de " + NBR + " sont:");
 
@@ -23,6 +24,13 @@ namespace Diviseur_NBR
             {
                 Console.WriteLine(r[i]);
             }
+
+            if (Diviseur1.EstUnNombrepremier(NBR) == true)
+            {
+                Console.WriteLine(+NBR + " est premier donc les diviseurs sont 1 et lui-même");
+            }
+
+
 
             Console.ReadKey();
 
