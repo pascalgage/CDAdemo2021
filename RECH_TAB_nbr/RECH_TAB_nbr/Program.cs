@@ -10,10 +10,10 @@ namespace RECH_TAB_nbr
     {
         static void Main(string[] args)
         {
-            uint index=0;
+            uint index = 0;
             int element = 1;
             uint nombreAreCH;
-            uint[] tableau = new uint[index];
+           
 
             Console.WriteLine("Entrez la taille de votre tableau, nombre de case= :");
 
@@ -21,10 +21,9 @@ namespace RECH_TAB_nbr
             {
                 Console.WriteLine("Mauvaise saisie !");
             }
-            
 
             
-
+            uint[] tableau = new uint[index];
             for (int i = 0; i < tableau.Length; i++)
             {
                 Console.WriteLine("Entrez le nombre " + ((element)++) + "/" + index);
@@ -44,7 +43,7 @@ namespace RECH_TAB_nbr
                 Console.WriteLine("Mauvaise saisie !");
             }
 
-            Console.WriteLine(Class1.Search_aNUM(tableau, nombreAreCH));
+            Console.WriteLine(Class1.Search_While(tableau, nombreAreCH));
             
 
             Console.ReadKey();

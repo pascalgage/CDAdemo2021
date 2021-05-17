@@ -36,8 +36,6 @@ namespace RECH_TAB_nbr
             
             bool test = false;
 
-            
-
             for (int i = 0; i < _monTab.Length; i++)
             {
 
@@ -53,6 +51,42 @@ namespace RECH_TAB_nbr
             {
                 resultat=(_monNBR + " n'existe pas dans le tableau");
             }
+
+            return resultat;
+        }
+
+        public static string Search_While(uint[] _monTab, uint _monNBR)
+        {
+            bool test2=false;
+
+            int compt = 0;
+
+            string resultat = " ";
+
+            while (test2==false)
+            {
+                if (_monTab[compt] == _monNBR)
+                {
+                    test2 = true;
+                    
+                    resultat = (_monNBR + " se trouve à la position " + (compt + 1));
+
+
+                }
+                else if ( compt== (_monTab[compt] - 1) && _monTab[compt] != _monNBR)
+                {
+                    test2 = true;
+                    resultat = (_monNBR + " n'existe pas dans le tableau");
+                }
+                else
+                {
+                    compt++;
+                    
+                }
+                
+            }
+            
+
 
             return resultat;
         }
