@@ -10,13 +10,18 @@ namespace RECH_TAB_nbr
     {
         static void Main(string[] args)
         {
-            int index;
+            uint index;
             int element = 1;
 
             int nombreAreCH;
-
+            
             Console.WriteLine("Entrez la taille de votre tableau, nombre de case= :");
-            index = int.Parse(Console.ReadLine());
+
+            while (!uint.TryParse(Console.ReadLine(), out index))
+            {
+                Console.WriteLine("Mauvaise saisie !");
+            }
+            
 
             int[] tableau = new int[index];
 
