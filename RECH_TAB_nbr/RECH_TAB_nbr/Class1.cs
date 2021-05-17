@@ -63,28 +63,30 @@ namespace RECH_TAB_nbr
 
             string resultat = " ";
 
-            while (test2==false)
+            while (test2 == false && compt < _monTab.Length)
             {
+
+                
+
                 if (_monTab[compt] == _monNBR)
                 {
                     test2 = true;
-                    
                     resultat = (_monNBR + " se trouve à la position " + (compt + 1));
+                    compt++;
 
-
-                }
-                else if ( compt== (_monTab[compt] - 1) && _monTab[compt] != _monNBR)
-                {
-                    test2 = true;
-                    resultat = (_monNBR + " n'existe pas dans le tableau");
                 }
                 else
                 {
                     compt++;
+                    resultat = (_monNBR + " n'existe pas dans le tableau");
                     
+                
                 }
                 
+                
+                
             }
+            
             
 
 
