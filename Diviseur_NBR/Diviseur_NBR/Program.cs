@@ -11,6 +11,7 @@ namespace Diviseur_NBR
     {
         static void Main(string[] args)
         {
+            //On invite l'utilisateur a entrer un nombre entier positif
             uint NBR;
             Console.WriteLine("Entrez un nombre entier positif:");
             NBR = uint.Parse(Console.ReadLine());
