@@ -8,9 +8,9 @@ namespace RECH_TAB_nbr
 {
     class Class1
     {
-        public static void Tri_Bull(int[] _Tab)
+        public static void Tri_Bull(uint[] _Tab)
         {
-            int temp = 0;
+            uint temp = 0;
             bool tri = false;
 
             while (tri == false)
@@ -28,6 +28,33 @@ namespace RECH_TAB_nbr
 
                 }
             }
+        }
+
+        public static string Search_aNUM(uint[] _monTab, uint _monNBR)
+        {
+            string resultat=" ";
+            
+            bool test = false;
+
+            
+
+            for (int i = 0; i < _monTab.Length; i++)
+            {
+
+                if (_monTab[i] == _monNBR)
+                {
+                    test = true;
+                    resultat=(_monNBR + " se trouve à la position " + (i + 1));
+
+                }
+
+            }
+            if (test == false)
+            {
+                resultat=(_monNBR + " n'existe pas dans le tableau");
+            }
+
+            return resultat;
         }
     }
 }

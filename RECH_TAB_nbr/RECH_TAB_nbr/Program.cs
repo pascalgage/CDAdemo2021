@@ -10,11 +10,11 @@ namespace RECH_TAB_nbr
     {
         static void Main(string[] args)
         {
-            uint index;
+            uint index=0;
             int element = 1;
-
             uint nombreAreCH;
-            
+            uint[] tableau = new uint[index];
+
             Console.WriteLine("Entrez la taille de votre tableau, nombre de case= :");
 
             while (!uint.TryParse(Console.ReadLine(), out index))
@@ -23,12 +23,12 @@ namespace RECH_TAB_nbr
             }
             
 
-            int[] tableau = new int[index];
+            
 
             for (int i = 0; i < tableau.Length; i++)
             {
                 Console.WriteLine("Entrez le nombre " + ((element)++) + "/" + index);
-                tableau[i] = int.Parse(Console.ReadLine());
+                tableau[i] = uint.Parse(Console.ReadLine());
             }
 
             Class1.Tri_Bull(tableau);
@@ -43,25 +43,9 @@ namespace RECH_TAB_nbr
             {
                 Console.WriteLine("Mauvaise saisie !");
             }
+
+            Console.WriteLine(Class1.Search_aNUM(tableau, nombreAreCH));
             
-
-            bool test = false;
-
-            for (int i = 0; i < tableau.Length; i++)
-            {
-                
-                if (tableau[i] == nombreAreCH)
-                {
-                    test = true;
-                    Console.WriteLine(nombreAreCH + " se trouve à la position "+(i+1));
-                   
-                }
-                
-            }
-            if (test == false)
-            {
-                Console.WriteLine(nombreAreCH + " n'existe pas dans le tableau");
-            }
 
             Console.ReadKey();
         }
