@@ -20,7 +20,7 @@ namespace UnitTestPREMIER_LIST
             Assert.IsFalse(Estpremier);
         }
         [TestMethod]
-        public void TestMethod2_EstUnNombrepremier_true()
+        public void TestMethod2_EstUnNombrepremier_false2()
         {
             bool Estpremier = Class1.EstUnNombrepremier(0);
             Assert.IsFalse(Estpremier);
