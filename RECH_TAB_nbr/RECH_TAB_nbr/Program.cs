@@ -13,7 +13,7 @@ namespace RECH_TAB_nbr
             uint index;
             int element = 1;
 
-            int nombreAreCH;
+            uint nombreAreCH;
             
             Console.WriteLine("Entrez la taille de votre tableau, nombre de case= :");
 
@@ -37,15 +37,30 @@ namespace RECH_TAB_nbr
             {
                 Console.Write(" " + item + " ");
             }
+
             Console.WriteLine("Entrez le nombre à rechercher:");
-            nombreAreCH = int.Parse(Console.ReadLine());
+            while (!uint.TryParse(Console.ReadLine(), out nombreAreCH))
+            {
+                Console.WriteLine("Mauvaise saisie !");
+            }
+            
+
+            bool test = false;
 
             for (int i = 0; i < tableau.Length; i++)
             {
+                
                 if (tableau[i] == nombreAreCH)
                 {
-                    Console.WriteLine(+nombreAreCH + " se trouve à la position "+(i+1));
+                    test = true;
+                    Console.WriteLine(nombreAreCH + " se trouve à la position "+(i+1));
+                   
                 }
+                
+            }
+            if (test == false)
+            {
+                Console.WriteLine(nombreAreCH + " n'existe pas dans le tableau");
             }
 
             Console.ReadKey();
