@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RECH_lettre_STRING
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -15,27 +15,43 @@ namespace RECH_lettre_STRING
 
             int compteur = 0;
 
+            int trouves = 0;
+
+            bool bingOK = false;
+
             Console.WriteLine("Entrez une phrase terminée par un point:");
             maphrase = Console.ReadLine();
 
             Console.WriteLine("Entrez la lettre recherchée:");
             char.TryParse(Console.ReadLine(), out lettre);
+            
 
-            for (int i = 0; i < maphrase.Length; i++)
+            bingOK=(Recherche.Recherche_doccurrence_dansUnePhrase(maphrase, lettre, out trouves));
+
+            if (bingOK == true)
             {
-                if (maphrase[i]==lettre)
-                {
-                    compteur++;
-                }
-            }
-            if (compteur == 0)
-            {
-                Console.WriteLine("La lettre "+lettre+" n'est pas présente");
+                Console.WriteLine("La lettre saisie " + lettre+" est présente " + trouves+" fois dans le texte.");
             }
             else
             {
-                Console.WriteLine("La lettre " + lettre + " apparaît : " + compteur + " fois dans la phrase");
+                Console.WriteLine("La lettre n'est pas présente !");
             }
+
+            //for (int i = 0; i < maphrase.Length; i++)
+            //{
+            //    if (maphrase[i]==lettre)
+            //    {
+            //        compteur++;
+            //    }
+            //}
+            //if (compteur == 0)
+            //{
+            //    Console.WriteLine("La lettre "+lettre+" n'est pas présente");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("La lettre " + lettre + " apparaît : " + compteur + " fois dans la phrase");
+            //}
             
 
             Console.ReadKey();
