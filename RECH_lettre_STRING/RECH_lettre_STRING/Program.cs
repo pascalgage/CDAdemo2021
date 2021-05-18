@@ -13,30 +13,35 @@ namespace RECH_lettre_STRING
             string maphrase;
             char lettre;
 
-            int compteur = 0;
+            int resultat = 0;
 
-            int trouves = 0;
-
-            bool bingOK = false;
-
-            Console.WriteLine("Entrez une phrase terminée par un point:");
-            maphrase = Console.ReadLine();
-
-            Console.WriteLine("Entrez la lettre recherchée:");
-            char.TryParse(Console.ReadLine(), out lettre);
             
 
-            bingOK=(Recherche.Recherche_doccurrence_dansUnePhrase(maphrase, lettre, out trouves));
+           
+            bool recommencer = false;
 
-            if (bingOK == true)
+            do
             {
-                Console.WriteLine("La lettre saisie " + lettre+" est présente " + trouves+" fois dans le texte.");
-            }
-            else
-            {
-                Console.WriteLine("La lettre n'est pas présente !");
-            }
 
+                Console.WriteLine("Entrez une phrase terminée par un point:");
+                maphrase = Console.ReadLine();
+
+                Console.WriteLine("Entrez la lettre recherchée:");
+                char.TryParse(Console.ReadLine(), out lettre);
+
+
+                resultat=(Recherche.Recherche_doccurrence_dansUnePhrase(maphrase, lettre));
+
+                if (resultat == 0)
+                {
+                    Console.WriteLine("La lettre saisie "+lettre+" n'apparaît pas dans le texte");
+                }
+                else
+                {
+                    Console.WriteLine("La lettre saisie " + lettre + " apparaît " + resultat+ " fois dans le texte");
+                }
+                
+            } while (recommencer == true);
             //for (int i = 0; i < maphrase.Length; i++)
             //{
             //    if (maphrase[i]==lettre)
@@ -52,7 +57,7 @@ namespace RECH_lettre_STRING
             //{
             //    Console.WriteLine("La lettre " + lettre + " apparaît : " + compteur + " fois dans la phrase");
             //}
-            
+
 
             Console.ReadKey();
         }
