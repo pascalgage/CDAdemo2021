@@ -66,8 +66,6 @@ namespace RECH_TAB_nbr
             while (test2 == false && compt < _monTab.Length)
             {
 
-                
-
                 if (_monTab[compt] == _monNBR)
                 {
                     test2 = true;
@@ -80,11 +78,8 @@ namespace RECH_TAB_nbr
                     compt++;
                     resultat = (_monNBR + " n'existe pas dans le tableau");
                     
-                
                 }
-                
-                
-                
+       
             }
 
             return resultat;
