@@ -11,7 +11,7 @@ namespace JEUNES
         static void Main(string[] args)
         {
             //Déclaration du tableau de vingt personnes
-            int[] jeunes = new int[5];
+            int[] jeunes = new int[20];
 
 
             //Création du tableau par la saisie des âges
@@ -38,7 +38,8 @@ namespace JEUNES
             if (moinsdevingt == 0)
             {
                 Console.WriteLine("Toutes les personnes ont plus de vingt ans");
-            }else if (moinsdevingt == jeunes.Length)
+            }
+            else if (moinsdevingt == jeunes.Length)
             {
                 Console.WriteLine("Toutes les personnes ont moins de vingt ans");
             }
