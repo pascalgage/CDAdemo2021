@@ -86,12 +86,10 @@ namespace RECH_TAB_nbr
                 
                 
             }
-            
-            
-
 
             return resultat;
         }
+
         public static bool Search_While(uint[] _monTab, uint _monNBR, ref int _index)
         {
             bool test2 = false;
