@@ -55,34 +55,34 @@ namespace RECH_TAB_nbr
             return resultat;
         }
 
-        public static string Search_While(uint[] _monTab, uint _monNBR)
+        public static bool Recherche_delaposition_dunNombredans_unTableau(uint[] _tableau, uint _nombreRecherche, out int _position)
         {
-            bool test2=false;
+            bool atrouve=false;
 
-            int compt = 0;
+            int compteur = 0;
+            _position = -1;
+           
 
-            string resultat = " ";
-
-            while (test2 == false && compt < _monTab.Length)
+            while (atrouve == false && compteur < _tableau.Length)
             {
 
-                if (_monTab[compt] == _monNBR)
+                if (_tableau[compteur] == _nombreRecherche)
                 {
-                    test2 = true;
-                    resultat = (_monNBR + " se trouve à la position " + (compt + 1));
-                    compt++;
+                    atrouve = true;
+                    _position = compteur;
+                   
 
                 }
                 else
                 {
-                    compt++;
-                    resultat = (_monNBR + " n'existe pas dans le tableau");
+
+                    atrouve = false;
                     
                 }
-       
+                compteur++;
             }
 
-            return resultat;
+            return atrouve;
         }
 
         public static bool Search_While(uint[] _monTab, uint _monNBR, ref int _index)

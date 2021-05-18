@@ -42,8 +42,17 @@ namespace RECH_TAB_nbr
             {
                 Console.WriteLine("Mauvaise saisie !");
             }
+            int position;
 
-            Console.WriteLine(Class1.Search_While(tableau, nombreAreCH));
+            bool atrouve=Class1.Recherche_delaposition_dunNombredans_unTableau(tableau, nombreAreCH, out position);
+            if (atrouve == true)
+            {
+                Console.WriteLine("Le nombre recherché est à la position :"+(position+1));
+            }
+            else
+            {
+                Console.WriteLine("Le nombre recherché n'est pas dans le tableau !");
+            }
             
 
             Console.ReadKey();
