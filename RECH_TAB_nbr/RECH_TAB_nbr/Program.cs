@@ -47,7 +47,7 @@ namespace RECH_TAB_nbr
             bool atrouve=Class1.Recherche_delaposition_dunNombredans_unTableau(tableau, nombreAreCH, out position);
             if (atrouve == true)
             {
-                Console.WriteLine("Le nombre recherché est à la position :"+(position+1));
+                Console.WriteLine("Le nombre recherché est à la position :"+(position+1)); //position +1 pour l'affichage de la position tableau à l'utilisateur
             }
             else
             {
