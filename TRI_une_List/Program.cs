@@ -15,9 +15,9 @@ namespace TRI_une_List
             List<int> Listing = new List<int>();
             bool finish = false;
             int nombre;
-            string decisionSaisie;
+            string decisionSaisie="n";
 
-            while (finish==false)
+            while (finish==false && decisionSaisie=="n")
             {
                 
                 Console.WriteLine("Entrez vos nombres dans la liste:");
@@ -33,12 +33,7 @@ namespace TRI_une_List
                     finish = true;
                     Console.WriteLine("Nous procédons au traîtement de vos saisies");
                 }
-                else
-                {
-                    Console.WriteLine("Entrez vos nombres dans la liste:");
-                    nombre = int.Parse(Console.ReadLine());
-                    Listing.Add(nombre);
-                }
+                
 
             }
             Tri.Tri_à_Bulle_LIST(Listing);
