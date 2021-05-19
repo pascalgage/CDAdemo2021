@@ -1,10 +1,11 @@
-﻿using System;
+﻿using RECH_lettre_STRING;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Denombrer_TAB_ALPHABET
+namespace FCT_Denombre
 {
     class Program
     {
@@ -13,6 +14,8 @@ namespace Denombrer_TAB_ALPHABET
             //Déclaration de variables
             string textAexaminer = "";//que l'on convertira en tableau de caractères
 
+            //création du compteur d'occurences...
+            int[] tableauComptage = new int[26];
 
             //création du tableau Alphabétique de comparaison...
             char[] alphabet = new char[26];
@@ -23,40 +26,35 @@ namespace Denombrer_TAB_ALPHABET
                 alphabet[i] = A;
                 A++;
             }
-            //création du compteur d'occurences...
-            int[] tableauComptage = new int[26];
 
             //création et mise en mémoire d'un texte utilisateur en minuscule
             Console.WriteLine("Veuillez entrer votre texte:");
             textAexaminer = Console.ReadLine().ToLower();
 
-            //on convertit le texte en tableau de caractères en vue de la comparaison avec tableau Alphabet
-            char[] textAexaminerX = textAexaminer.ToCharArray();
 
-            //on effectue la comparaison du tableau de caractère du texte utilisateur avec notre Alphabet
+
+            //boucle for ou on appelle la fonction Recherche pour chaque lettre
+            int resultat = 0;
+
             for (int i = 0; i < alphabet.Length; i++)
             {
-                foreach (char ALPHA in textAexaminerX)
-                {
-
-                    if (alphabet[i] == ALPHA)
-                    {
-                        tableauComptage[i]++;
-                    }
-
-                }
+               resultat= Recherche.Recherche_doccurrence_dansUnePhrase(textAexaminer, alphabet[i]);
+               tableauComptage[i] = resultat;
             }
-            //Affichage du résultat final...
+
+            //affichage
             for (int i = 0; i < tableauComptage.Length; i++)
             {
                 if (tableauComptage[i] != 0)
                 {
-                    Console.WriteLine(alphabet[i] + " : " + tableauComptage[i]);
+                    Console.WriteLine(alphabet[i]+":"+tableauComptage[i]);
                 }
+                
             }
+            
+            //Console.WriteLine(alphabet[i] + ":" + resultat);
 
             Console.ReadKey();
-
         }
     }
 }

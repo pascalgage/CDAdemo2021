@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RECH_lettre_STRING
 {
-    class Recherche
+    public class Recherche
     {
         public static int Recherche_doccurrence_dansUnePhrase(string _texteAexaminer, char _lettreAtrouve)
         {
