@@ -10,7 +10,8 @@ namespace Denombrer_TAB_ALPHABET
     {
         static void Main(string[] args)
         {
-            string textAexaminer = "";
+            //Déclaration de variables
+            string textAexaminer = "";//que l'on convertira en tableau de caractères
 
 
             //création du tableau Alphabétique de comparaison...
