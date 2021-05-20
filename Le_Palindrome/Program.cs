@@ -15,7 +15,7 @@ namespace Le_Palindrome
             bool palindrome = true;
 
 
-            Console.WriteLine("Entrez une phrase ou un mot pour voir s'il s'agit d'un palindrome");
+            Console.WriteLine("Entrez une phrase ou un mot pour voir s'il s'agit d'un palindrome:");
             phrase = Console.ReadLine();
 
          
@@ -40,12 +40,13 @@ namespace Le_Palindrome
 
             if (palindrome == true)
             {
-                Console.WriteLine("Palindrome OK");
+                Console.WriteLine("C'est un palindrome !");
             }
             else
             {
-                Console.WriteLine("NO Palindrome");
+                Console.WriteLine("Ce n'est pas un palindrome !");
             }
+
             Console.ReadKey();
         }
     }
