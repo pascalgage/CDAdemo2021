@@ -20,6 +20,7 @@ namespace Le_Palindrome
             
             string test= phrase.Substring(phrase.Length - 1, 1);
             phrase = phrase.Replace(".", "");
+
             Console.WriteLine(test);
             
             Console.WriteLine(phrase);
