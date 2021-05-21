@@ -14,11 +14,19 @@ namespace Le_Palindrome
             int indiceLettre = 0;
             bool palindrome = true;
 
-
+            
             Console.WriteLine("Entrez une phrase ou un mot pour voir s'il s'agit d'un palindrome:");
             phrase = Console.ReadLine();
+            
+            string test= phrase.Substring(phrase.Length - 1, 1);
+            phrase = phrase.Replace(".", "");
+            Console.WriteLine(test);
+            
+            Console.WriteLine(phrase);
 
-         
+            if (test == ".") { 
+
+                
 
             while (palindrome==true && indiceLettre<(phrase.Length/2))
             {
@@ -46,7 +54,7 @@ namespace Le_Palindrome
             {
                 Console.WriteLine("Ce n'est pas un palindrome !");
             }
-
+            }
             Console.ReadKey();
         }
     }
