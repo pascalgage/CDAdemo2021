@@ -17,11 +17,11 @@ namespace Le_Palindrome
             
             Console.WriteLine("Entrez une phrase ou un mot pour voir s'il s'agit d'un palindrome:");
             phrase = Console.ReadLine();
-            
-            string test= phrase.Substring(phrase.Length - 1, 1);
-            phrase = phrase.Replace(".", "");
 
-            Console.WriteLine(test);
+            string test= phrase.Substring(phrase.Length - 1, 1);
+            //phrase = phrase.Replace(".", "");
+            phrase = phrase.Substring(0, phrase.Length - 1);
+            Console.WriteLine(phrase);
             
             Console.WriteLine(phrase);
 
