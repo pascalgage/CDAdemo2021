@@ -21,7 +21,7 @@ namespace Le_Palindrome
             string test= phrase.Substring(phrase.Length - 1, 1);
             //phrase = phrase.Replace(".", "");
             phrase = phrase.Substring(0, phrase.Length - 1);
-            Console.WriteLine(phrase);
+            Console.WriteLine(test);
             
             Console.WriteLine(phrase);
 
