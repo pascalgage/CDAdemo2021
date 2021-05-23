@@ -12,7 +12,7 @@ namespace PGCD_méthode_Last
         {
             int a;
             int b;
-            int div;
+            
 
             Console.WriteLine("Veuillez entrer un nombre entier positif A:");
             a = int.Parse(Console.ReadLine());
