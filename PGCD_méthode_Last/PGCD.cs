@@ -10,7 +10,7 @@ namespace PGCD_méthode_Last
     {
         public static int Get_Pgcd(int _a, int _b)
         {
-            int div = 1;
+            int div=0;
             List<int> Tab = new List<int>();
 
             while(div<_a && div < _b)
