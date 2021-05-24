@@ -21,6 +21,7 @@ namespace PGCD_méthode_Last
             Console.WriteLine("Veuillez entrer un nombre entier positif C:");
             c = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("Le PGCD de " + a + " et " + b + " et " + c + " est :");
             Console.Write(PGCD.Get_Pgcd(a, b, c));
 
             Console.ReadKey();
