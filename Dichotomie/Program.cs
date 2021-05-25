@@ -36,10 +36,13 @@ namespace Dichotomie
             if (prenomRecherché == prenoms[milieu])
             {
                 trouve = true;
-                }
+            }
                 else
                 {
+                    if (prenomRecherché != prenoms[milieu])
+                    {
 
+                    }
                 }
 
             } while (trouve==true);
