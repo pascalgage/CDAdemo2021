@@ -25,12 +25,25 @@ namespace Dichotomie
             Console.WriteLine("Entrez le prénom que vous recherchez pour obtenir son index:");
             prenomRecherché = Console.ReadLine();
 
-            int milieu = 0;
-            int debut = 0;
-            int fin = 0;
+            bool trouve = false;
+            int debut = 1;
+            int fin = prenoms.Count;
+            int milieu = (debut + fin) / 2;
+            do
+            {
 
             
-            
+            if (prenomRecherché == prenoms[milieu])
+            {
+                trouve = true;
+                }
+                else
+                {
+
+                }
+
+            } while (trouve==true);
+
 
 
             //for (int i = 0; i < prenoms.Count; i++)
