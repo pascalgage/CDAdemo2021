@@ -25,18 +25,24 @@ namespace Dichotomie
             Console.WriteLine("Entrez le prénom que vous recherchez pour obtenir son index:");
             prenomRecherché = Console.ReadLine();
 
-            for (int i = 0; i < prenoms.Count; i++)
-            {
-                if (prenomRecherché == prenoms[i])
-                {
-                    Console.WriteLine(i+1);
-                }
-                else
-                {
-                    Console.WriteLine("Le prénom recherché n'existe pas dans le tableau !");
-                    break;
-                }
-            }
+            int milieu = 0;
+            int debut = 0;
+            int fin = 0;
+
+            
+            
+
+
+            //for (int i = 0; i < prenoms.Count; i++)
+            //{
+            //    if (prenomRecherché == prenoms[i])
+            //    {
+            //        Console.WriteLine("Le prénom recherché "+prenomRecherché+" est à la position " +(i+1));
+
+            //    }
+
+
+            //}
 
             Console.ReadKey();
         }
