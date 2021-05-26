@@ -10,55 +10,29 @@ namespace Dichotomie
     {
         static void Main(string[] args)
         {
-            string prenom="";
+            
             string prenomRecherché;
+            string result;
 
             List<string> prenoms = new List<string>();
 
+            //appel de la méthode CreeTab....cf la classe TabCreation
             TabCreation.CreeTab(out prenoms);
 
-            for (int i = 0; i < prenoms.Count; i++)
-            {
-                Console.WriteLine(prenoms[i]);
-            }
-
+            
             Console.WriteLine("Entrez le prénom que vous recherchez pour obtenir son index:");
             prenomRecherché = Console.ReadLine();
 
-            bool trouve = false;
-            int debut = 1;
-            int fin = prenoms.Count;
-            int milieu = (debut + fin) / 2;
-            do
-            {
+            //appel de la méthode Verif_tableau...cf la classe TabCreation
+            result=TabCreation.Verif_tableau(prenoms, prenomRecherché);
+
+            //affichage du résultat
+            Console.WriteLine(result);
+
+         
+           
 
             
-            if (prenomRecherché == prenoms[milieu])
-            {
-                trouve = true;
-            }
-                else
-                {
-                    if (prenomRecherché != prenoms[milieu])
-                    {
-
-                    }
-                }
-
-            } while (trouve==true);
-
-
-
-            //for (int i = 0; i < prenoms.Count; i++)
-            //{
-            //    if (prenomRecherché == prenoms[i])
-            //    {
-            //        Console.WriteLine("Le prénom recherché "+prenomRecherché+" est à la position " +(i+1));
-
-            //    }
-
-
-            //}
 
             Console.ReadKey();
         }
