@@ -16,7 +16,7 @@ namespace Factorielle
             f=double.Parse(Console.ReadLine());
 
             Console.WriteLine(Factorielle.Factor(f));
-
+            Console.WriteLine(Factorielle.RecursivF(f));
             Console.ReadKey();
         }
     }
