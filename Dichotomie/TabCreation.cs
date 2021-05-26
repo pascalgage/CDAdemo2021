@@ -13,16 +13,15 @@ namespace Dichotomie
             string verifie="";
             Tableau_prenoms = new List<string>();
 
-            while (verifie != "stop") { 
+            while (verifie != "stop") 
+            { 
             
                 Console.WriteLine("Entrez un nom pour l'ajouter à la liste 'stop'+ Entrée pour arrêter la saisie:");
                 verifie = Console.ReadLine();
-                if (verifie != "stop")
-                {
-                    Tableau_prenoms.Add(verifie);
-                }
-
+                if(verifie !="stop")
+                Tableau_prenoms.Add(verifie);
             }
+
             Tableau_prenoms.Sort();
         }
 

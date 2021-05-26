@@ -15,11 +15,13 @@ namespace Dichotomie
             string result;
 
             List<string> prenoms = new List<string>();
-
+            
             //appel de la méthode CreeTab....cf la classe TabCreation
             TabCreation.CreeTab(out prenoms);
-
-            
+            for (int i = 0; i < prenoms.Count; i++)
+            {
+                Console.WriteLine(prenoms[i]);
+            }
             Console.WriteLine("Entrez le prénom que vous recherchez pour obtenir son index:");
             prenomRecherché = Console.ReadLine();
 
@@ -28,11 +30,6 @@ namespace Dichotomie
 
             //affichage du résultat
             Console.WriteLine(result);
-
-         
-           
-
-            
 
             Console.ReadKey();
         }
