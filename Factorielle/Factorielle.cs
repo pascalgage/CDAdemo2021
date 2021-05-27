@@ -25,7 +25,7 @@ namespace Factorielle
         public static uint RecursivF(uint _nbr)
         {
 
-            uint resultat =0;
+            uint resultat = 0;
 
             if (_nbr == 1)
             {
@@ -37,18 +37,22 @@ namespace Factorielle
             }
 
             return resultat;
-            
+
         }
+
         public static double Exposant(double _nbr, double _exp)
         {
             double resultat = 0;
 
-            if (_exp == 0) { resultat = 1; }
-            
+            if (_exp == 0) 
+            { 
+                resultat = 1; 
+            }
             else
             {
                 resultat = _nbr * Exposant(_nbr, _exp - 1);
             }
+
             return resultat;
         }
     }
