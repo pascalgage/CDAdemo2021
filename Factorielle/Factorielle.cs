@@ -21,18 +21,35 @@ namespace Factorielle
             }
             return resultat;
         }
-        public static double RecursivF(double _nbr)
-        {
-            double resultat = _nbr;
 
-            for (int i = 0; i < _nbr; i++)
+        public static uint RecursivF(uint _nbr)
+        {
+
+            uint resultat =0;
+
+            if (_nbr == 1)
             {
-                resultat+=_nbr*_nbr--;
-                
+                resultat = 1;
+            }
+            else
+            {
+                resultat = _nbr * RecursivF(_nbr - 1);
             }
 
             return resultat;
             
+        }
+        public static double Exposant(double _nbr, double _exp)
+        {
+            double resultat = 0;
+
+            if (_exp == 0) { resultat = 1; }
+            
+            else
+            {
+                resultat = _nbr * Exposant(_nbr, _exp - 1);
+            }
+            return resultat;
         }
     }
 }

@@ -10,13 +10,23 @@ namespace Factorielle
     {
         static void Main(string[] args)
         {
-            double f=0;
+            uint f=0;
+            double p = 0;
+            double y = 0;
 
             Console.WriteLine("Entrez un nombre F:");
-            f=double.Parse(Console.ReadLine());
+            f=uint.Parse(Console.ReadLine());
 
             Console.WriteLine(Factorielle.Factor(f));
             Console.WriteLine(Factorielle.RecursivF(f));
+
+            Console.WriteLine("Entrez un nombre P:");
+            p = double.Parse(Console.ReadLine());
+            Console.WriteLine("à l'exposant Y:");
+            y = double.Parse(Console.ReadLine());
+
+            Console.WriteLine(Factorielle.Exposant(p, y));
+
             Console.ReadKey();
         }
     }
