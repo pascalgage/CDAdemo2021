@@ -18,6 +18,8 @@ namespace Television
 
             lateledusalon.Allumer();
             lateledusalon.Eteindre();
+
+            Console.ReadKey();
         }
     }
 }

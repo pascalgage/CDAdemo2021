@@ -17,17 +17,17 @@ namespace Bouteille
 		public decimal ContenanceEnL
         {
             get { return contenanceEnL; }
-            set { contenanceEnL = value; }
+            
         }
 		public decimal ContenuEnPourcentage
         {
             get { return contenuEnPourcentage; }
-            set { contenuEnPourcentage = value; }
+            
         }
 		public bool Ouvert
         {
             get { return ouvert; }
-            set { ouvert = value; }
+            
         }
 
 
@@ -35,7 +35,7 @@ namespace Bouteille
 		public Bouteille()
 		{
 			this.contenanceEnL = 2;
-			this.contenuEnPourcentage = 50;
+			this.contenuEnPourcentage = 100;
 			this.ouvert = false;
 		}
 		//constructeur classique
@@ -53,18 +53,24 @@ namespace Bouteille
 		}
 
 
-
-
 		public bool Fermer()
 		{
-			ouvert = false;
+            if (ouvert == true)
+            {
+				ouvert = false;
+			}
+			
 			return ouvert;
 			
 		}
 
 		public bool Ouvrir()
 		{
-			ouvert = true;
+            if (ouvert == false)
+            {
+				ouvert = true;
+			}
+			
 			return ouvert;
 			
 		}
@@ -106,11 +112,10 @@ namespace Bouteille
 			
 		}
 
-		/// 
-		/// <param name="aOterEnPourcentage"></param>
+		
 		public bool Vider(decimal aOterEnPourcentage)
 		{
-			if(ouvert==true && contenuEnPourcentage <= 100)
+			if(ouvert==true && contenuEnPourcentage <= 100 && contenuEnPourcentage>0)
             {
 				contenuEnPourcentage -= aOterEnPourcentage;
 				return true;
@@ -139,4 +144,4 @@ namespace Bouteille
 
 	}//end Bouteille
 
-}//end namespace Bouteille
+}//end
