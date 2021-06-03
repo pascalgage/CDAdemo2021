@@ -20,6 +20,10 @@ namespace Bouteille
             mabouteille.RemplirTout();
             mabouteille.Vider(30);
             mabouteille.ViderTout();
+
+            Console.WriteLine(mabouteille.ToString());
+
+            Console.ReadKey();
         }
     }
 }

@@ -47,6 +47,14 @@ namespace Bouteille
         }
 
 		//Méthodes...
+		public override string ToString()
+		{
+			return base.ToString() + " contenance en L = " + contenanceEnL + " contenu en %= " + contenuEnPourcentage+" état = "+ouvert;
+		}
+
+
+
+
 		public bool Fermer()
 		{
 			ouvert = false;
