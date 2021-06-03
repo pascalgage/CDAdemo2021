@@ -17,7 +17,9 @@ namespace Bouteille
 
             mabouteille.Ouvrir();
             mabouteille.Remplir(10);
-            
+            mabouteille.RemplirTout();
+            mabouteille.Vider(30);
+            mabouteille.ViderTout();
         }
     }
 }

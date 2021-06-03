@@ -86,22 +86,47 @@ namespace Bouteille
 
 		public bool RemplirTout()
 		{
-
-			return false;
+			if(ouvert==true && contenuEnPourcentage < 100)
+            {
+				contenuEnPourcentage = 100;
+				return true;
+            }
+            else
+            {
+				return false;
+            }
+			
 		}
 
 		/// 
 		/// <param name="aOterEnPourcentage"></param>
 		public bool Vider(decimal aOterEnPourcentage)
 		{
-
-			return false;
+			if(ouvert==true && contenuEnPourcentage <= 100)
+            {
+				contenuEnPourcentage -= aOterEnPourcentage;
+				return true;
+            }
+            else
+            {
+				return false;
+			}
+			
 		}
 
 		public bool ViderTout()
 		{
+			if(ouvert==true && contenuEnPourcentage <= 100)
+            {
+				contenuEnPourcentage = 0;
+				return true;
+            }
+            else
+            {
+				return false;
+			}
 
-			return false;
+			
 		}
 
 	}//end Bouteille
