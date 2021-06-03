@@ -16,8 +16,13 @@ namespace Bouteille
             mabouteille = new Bouteille();
 
             mabouteille.Ouvrir();
+            mabouteille.RemplirTout();
+            mabouteille.Vider(30);
+            mabouteille.Fermer();
+            mabouteille.Ouvrir();
 
-            mabouteille.Vider(aRajouterEnPourcentage);
+            mabouteille.Remplir(29);
+            mabouteille.Remplir(1);
             
             
 
