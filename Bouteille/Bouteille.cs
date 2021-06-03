@@ -8,12 +8,10 @@ namespace Bouteille
 {
 	public class Bouteille
 	{
-
+		//attributs...
 		private decimal contenanceEnL;
 		private decimal contenuEnPourcentage;
 		private bool ouvert;
-
-
 
 		//propriétés....
 		public decimal ContenanceEnL
@@ -31,16 +29,24 @@ namespace Bouteille
             get { return ouvert; }
             set { ouvert = value; }
         }
-		//constructeur d'objet
 
 
-
-
-		public Bouteille(decimal contenanceEnL, decimal contenuEnPourcentage, bool ouvert)
+		//Constructeur par défaut
+		public Bouteille()
 		{
-
+			this.contenanceEnL = 2;
+			this.contenuEnPourcentage = 100;
+			this.ouvert = false;
 		}
+		//constructeur classique
+		public Bouteille(decimal _contenanceEnL,decimal _contenuEnPourcentage,bool _ouvert)
+        {
+			contenanceEnL = _contenanceEnL;
+			contenuEnPourcentage = _contenuEnPourcentage;
+			ouvert = _ouvert;
+        }
 
+		//Méthodes...
 		public bool Fermer()
 		{
 

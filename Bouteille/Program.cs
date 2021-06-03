@@ -10,6 +10,8 @@ namespace Bouteille
     {
         static void Main(string[] args)
         {
+            Bouteille mabouteille;
+            mabouteille = new Bouteille();
         }
     }
 }
