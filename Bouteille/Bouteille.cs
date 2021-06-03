@@ -35,7 +35,7 @@ namespace Bouteille
 		public Bouteille()
 		{
 			this.contenanceEnL = 2;
-			this.contenuEnPourcentage = 100;
+			this.contenuEnPourcentage = 50;
 			this.ouvert = false;
 		}
 		//constructeur classique
@@ -49,22 +49,39 @@ namespace Bouteille
 		//Méthodes...
 		public bool Fermer()
 		{
-
-			return false;
+			ouvert = false;
+			return ouvert;
+			
 		}
 
 		public bool Ouvrir()
 		{
-
-			return false;
+			ouvert = true;
+			return ouvert;
+			
 		}
 
-		/// 
-		/// <param name="aRajouterEnPourcentage"></param>
+		
 		public bool Remplir(decimal aRajouterEnPourcentage)
 		{
-
-			return false;
+			if(ouvert==true && contenuEnPourcentage < 100)
+            {
+                if ((aRajouterEnPourcentage + contenuEnPourcentage) < 100)
+                {
+					contenuEnPourcentage += aRajouterEnPourcentage;
+					return true;
+                }
+                else
+                {
+					return false;
+                }
+				
+            }
+            else
+            {
+				return false;
+			}
+			
 		}
 
 		public bool RemplirTout()

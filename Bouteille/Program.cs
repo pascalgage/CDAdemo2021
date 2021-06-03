@@ -10,8 +10,14 @@ namespace Bouteille
     {
         static void Main(string[] args)
         {
+            //decimal aRajouterEnPourcentage=10;
+
             Bouteille mabouteille;
             mabouteille = new Bouteille();
+
+            mabouteille.Ouvrir();
+            mabouteille.Remplir(10);
+            
         }
     }
 }
