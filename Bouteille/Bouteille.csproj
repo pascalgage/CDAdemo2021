@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2908A7D7-58FE-440D-B6BA-6AE17B9A16A4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Bouteille</RootNamespace>
+    <RootNamespace>NS_Bouteille</RootNamespace>
     <AssemblyName>Bouteille</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

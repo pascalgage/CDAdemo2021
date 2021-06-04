@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bouteille
+namespace NS_Bouteille
 {
 	public class Bouteille
 	{
@@ -58,9 +58,14 @@ namespace Bouteille
             if (ouvert == true)
             {
 				ouvert = false;
-			}
+				return true;
+            }
+            else
+            {
+				return false;
+            }
 			
-			return ouvert;
+			
 			
 		}
 
@@ -69,9 +74,12 @@ namespace Bouteille
             if (ouvert == false)
             {
 				ouvert = true;
+				return true;
+            }
+            else
+            {
+				return false;
 			}
-			
-			return ouvert;
 			
 		}
 

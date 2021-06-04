@@ -1,16 +1,17 @@
-﻿using System;
+﻿using NS_Bouteille;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bouteille
+namespace P_Bouteille
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            decimal aRajouterEnPourcentage=50;
+            
 
             Bouteille mabouteille;
             mabouteille = new Bouteille();
