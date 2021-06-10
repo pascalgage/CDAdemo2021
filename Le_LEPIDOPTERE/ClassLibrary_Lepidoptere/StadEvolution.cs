@@ -12,6 +12,8 @@ namespace ClassLibrary_Lepidoptere
 
 		public abstract void SeDeplacer();
 
+		
+
 	}//end StadEvolution
 
 }//end namespace Lepidoptere

@@ -35,9 +35,27 @@ namespace ClassLibrary_Lepidoptere {
 			sonStadeCourant.SeDeplacer();
 		}
 
+		//public void SeTransformer()
+		//{
+		//	if (sonStadeCourant is Oeuf)
+		//          {
+		//		sonStadeCourant = new Chenille();
+		//          }
+		//          else if (sonStadeCourant is Chenille)
+		//          {
+		//		sonStadeCourant = new Chrisalyde();
+		//          }
+
+		//          else if (sonStadeCourant is Papillon)
+		//          {
+		//		sonStadeCourant = new Papillon();
+		//          }
+		//      }
+
 		public void SeTransformer()
 		{
-			sonStadeCourant.DonneLeProchainStade();
+		
+			sonStadeCourant = sonStadeCourant.DonneLeProchainStade();
 		}
 
 	}//end Lepidoptere

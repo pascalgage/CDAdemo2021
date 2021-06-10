@@ -22,7 +22,7 @@ namespace ClassLibrary_Lepidoptere
 		}
 		public override StadEvolution DonneLeProchainStade()
 		{
-			return new Papillon();
+			return this;
 		}
 
 		public override void SeDeplacer()

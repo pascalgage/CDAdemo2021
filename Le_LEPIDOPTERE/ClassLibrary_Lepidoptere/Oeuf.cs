@@ -26,8 +26,7 @@ namespace ClassLibrary_Lepidoptere
 			return new Chenille();
 		}
 
-
-		public override void SeDeplacer()
+        public override void SeDeplacer()
 		{
 			Console.WriteLine("Je ne sais pas me déplacer");
 		}
