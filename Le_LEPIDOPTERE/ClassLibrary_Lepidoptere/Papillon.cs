@@ -10,17 +10,24 @@
 
 
 using ClassLibrary_Lepidoptere;
+using System;
+
 namespace ClassLibrary_Lepidoptere
 {
 	public class Papillon : StadEvolution {
 
-		public Papillon(){
+		public Papillon()
+		{
 
 		}
+		public override StadEvolution DonneLeProchainStade()
+		{
+			return new Papillon();
+		}
 
-
-		public override void SeDeplacer(){
-
+		public override void SeDeplacer()
+		{
+			Console.WriteLine("Je vole");
 		}
 
 	}//end Papillon

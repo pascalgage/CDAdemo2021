@@ -10,6 +10,8 @@
 
 
 using ClassLibrary_Lepidoptere;
+using System;
+
 namespace ClassLibrary_Lepidoptere
 {
 	public class Chrisalyde : StadEvolution {
@@ -17,11 +19,15 @@ namespace ClassLibrary_Lepidoptere
 		public Chrisalyde(){
 
 		}
+		public override StadEvolution DonneLeProchainStade()
+		{
+			return new Papillon();
+		}
 
-		
 
-		public override void SeDeplacer(){
-
+		public override void SeDeplacer()
+		{
+			Console.WriteLine("Je reste accroché!");
 		}
 
 	}//end Chrisalyde

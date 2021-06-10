@@ -5,8 +5,9 @@ using ClassLibrary_Lepidoptere;
 namespace ClassLibrary_Lepidoptere {
 	public class Lepidoptere {
 		//attributs
-		private StadEvolution sonStadeCourant;
 		private string nom;
+		private StadEvolution sonStadeCourant;
+		
 
 		//propriétés
 		public string Nom { get => nom; }
@@ -21,22 +22,22 @@ namespace ClassLibrary_Lepidoptere {
 
 		}
 		//constructeur par défaut
-		public Lepidoptere()
+		public Lepidoptere(string _nom)
 		{
 
-			this.nom = "";
+			this.nom = _nom;
 			this.sonStadeCourant = new Oeuf();
 
 		}
 
 		public void SeDeplacer()
 		{
-
+			sonStadeCourant.SeDeplacer();
 		}
 
 		public void SeTransformer()
 		{
-
+			sonStadeCourant.DonneLeProchainStade();
 		}
 
 	}//end Lepidoptere

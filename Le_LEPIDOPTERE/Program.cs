@@ -12,8 +12,12 @@ namespace Le_LEPIDOPTERE
     {
         static void Main(string[] args)
         {
-            Lepidoptere monLep = new Lepidoptere();
+            Lepidoptere monLep = new Lepidoptere("bea");
             monLep.SeDeplacer();
+            monLep.SeTransformer();
+            monLep.SeDeplacer();
+
+            Console.ReadKey();
         }
     }
 }

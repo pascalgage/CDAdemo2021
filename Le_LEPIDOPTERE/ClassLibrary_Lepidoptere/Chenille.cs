@@ -10,6 +10,8 @@
 
 
 using ClassLibrary_Lepidoptere;
+using System;
+
 namespace ClassLibrary_Lepidoptere
 {
 	public class Chenille : StadEvolution {
@@ -18,10 +20,16 @@ namespace ClassLibrary_Lepidoptere
 
 		}
 
-		
-		public override void SeDeplacer(){
-
+		public override void SeDeplacer()
+		{
+			Console.WriteLine("Je rampe");
 		}
+		public override StadEvolution DonneLeProchainStade()
+		{
+			return new Chrisalyde();
+		}
+
+
 
 	}//end Chenille
 

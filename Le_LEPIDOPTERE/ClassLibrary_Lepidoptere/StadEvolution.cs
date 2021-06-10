@@ -5,13 +5,9 @@ namespace ClassLibrary_Lepidoptere
 {
 	public abstract class StadEvolution 
 	{
-		string nom;
+		
 
-		public StadEvolution()
-		{
-			this.nom = "";
-		}
-
+		public abstract StadEvolution DonneLeProchainStade();
 		
 
 		public abstract void SeDeplacer();

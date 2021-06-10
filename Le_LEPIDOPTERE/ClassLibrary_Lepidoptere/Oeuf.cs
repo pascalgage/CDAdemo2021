@@ -10,6 +10,8 @@
 
 
 using ClassLibrary_Lepidoptere;
+using System;
+
 namespace ClassLibrary_Lepidoptere
 {
 	public class Oeuf : StadEvolution {
@@ -19,13 +21,18 @@ namespace ClassLibrary_Lepidoptere
 
 		}
 
-		
+		public override StadEvolution DonneLeProchainStade()
+		{
+			return new Chenille();
+		}
+
 
 		public override void SeDeplacer()
 		{
-
+			Console.WriteLine("Je ne sais pas me déplacer");
 		}
+       
 
-	}//end Oeuf
+    }//end Oeuf
 
 }//end namespace Lepidoptere
