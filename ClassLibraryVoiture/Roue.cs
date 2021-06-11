@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryVoiture
 {
-    public class Roue
+    public class Roue :Moteur
     {
         private bool roueTourne = false;
 

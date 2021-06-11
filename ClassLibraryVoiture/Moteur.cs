@@ -8,18 +8,18 @@ namespace ClassLibraryVoiture
 {
     public class Moteur
     {
-        private bool moteurTourne = false;
+        public bool moteurON = false;
 
         public Moteur()
         {
-
+            this.moteurON = false;
         }
 
         public bool  Eteindre()
         {
-            if (moteurTourne == true)
+            if (moteurON == true)
             {
-                moteurTourne = false;
+                moteurON = false;
                 return true;
             }
             else
@@ -30,9 +30,9 @@ namespace ClassLibraryVoiture
 
         public bool Allummer()
         {
-            if (moteurTourne == false)
+            if (moteurON == false)
             {
-                moteurTourne = true;
+                moteurON = true;
                 return true;
             }
             else

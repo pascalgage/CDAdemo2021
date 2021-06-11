@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryVoiture
 {
-    public class Voiture
+    public class Voiture  :Moteur
     {
         //attributs
         private string modele;
@@ -30,14 +30,21 @@ namespace ClassLibraryVoiture
         {
 
             this.modele = _modele;
-            this.moteurTourne = new Moteur();
-            this.roueTourne = new Roue();
+            
+            
 
         }
 
         public void Demarrer()
         {
-            
+            if (moteurON == true)
+            {
+                Console.WriteLine("Vroum Vroum");
+            }
+            else
+            {
+                Console.WriteLine("Rien");
+            }
         }
 
         public void Arreter()
