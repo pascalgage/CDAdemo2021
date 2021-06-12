@@ -18,6 +18,8 @@ namespace LaVoiture
             
             bmw.Avancer();
 
+            bmw.Arreter();
+
             Console.ReadKey();
         }
     }

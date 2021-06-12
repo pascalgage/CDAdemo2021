@@ -53,9 +53,15 @@ namespace ClassLibraryVoiture
             return demarre;
         }
 
-        public void Arreter()
+        public bool Arreter()
         {
-            
+            if (MoteurON == true && demarre == true)
+            {
+                demarre = false;
+                Console.Clear();
+                Console.WriteLine("Je m'arrête !STOP");
+            }
+            return demarre;
         }
 
         public void Avancer()
