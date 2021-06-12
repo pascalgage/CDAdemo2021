@@ -40,7 +40,7 @@ namespace ClassLibraryVoiture
         public bool Demarrer()
         {
             
-            if (moteurON == true)
+            if (MoteurON == true)
             {
                 Console.WriteLine("Vroum Vroum");
                 demarre=true;
@@ -60,7 +60,7 @@ namespace ClassLibraryVoiture
 
         public void Avancer()
         {
-            if(moteurON==true && demarre==true)
+            if(MoteurON==true && demarre==true)
             {
                 Console.WriteLine("Je file à 100 km/h !!!");
             }

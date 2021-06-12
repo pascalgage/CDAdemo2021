@@ -8,7 +8,16 @@ namespace ClassLibraryVoiture
 {
     public class Moteur
     {
-        public bool moteurON = false;
+        //Attributs...
+        private bool moteurON = false;
+
+        //Propriétés...
+        public bool MoteurON
+        {
+            get { return moteurON; }
+            
+
+        }
 
         public Moteur()
         {
