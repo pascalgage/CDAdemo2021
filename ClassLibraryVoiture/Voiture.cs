@@ -13,6 +13,8 @@ namespace ClassLibraryVoiture
         private Moteur moteurTourne;
         private Roue roueTourne;
 
+        bool demarre = false;
+
         //propriétés
         public string Modele { get => modele; }
         public Moteur MoteurTourne { get => moteurTourne; }
@@ -35,16 +37,20 @@ namespace ClassLibraryVoiture
 
         }
 
-        public void Demarrer()
+        public bool Demarrer()
         {
+            
             if (moteurON == true)
             {
                 Console.WriteLine("Vroum Vroum");
+                demarre=true;
             }
             else
             {
                 Console.WriteLine("Rien");
+                demarre=false;
             }
+            return demarre;
         }
 
         public void Arreter()
@@ -54,7 +60,14 @@ namespace ClassLibraryVoiture
 
         public void Avancer()
         {
-            
+            if(moteurON==true && demarre==true)
+            {
+                Console.WriteLine("Je file à 100 km/h !!!");
+            }
+            else
+            {
+                Console.WriteLine("0 km/h");
+            }
         }
     }
 }

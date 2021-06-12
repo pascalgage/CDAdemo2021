@@ -11,11 +11,12 @@ namespace LaVoiture
         static void Main(string[] args)
         {
             Voiture bmw = new Voiture("mabm");
-            Moteur m3 = new Moteur();
 
-            
             bmw.Allummer();
+
             bmw.Demarrer();
+            
+            bmw.Avancer();
 
             Console.ReadKey();
         }
