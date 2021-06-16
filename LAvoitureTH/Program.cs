@@ -11,7 +11,12 @@ namespace LAvoitureTH
         static void Main(string[] args)
         {
             Voiture bmw = new Voiture();
+
+            bmw.Demarrer();
+
             bmw.Avancer();
+
+            bmw.Arreter();
             
 
             Console.ReadKey();

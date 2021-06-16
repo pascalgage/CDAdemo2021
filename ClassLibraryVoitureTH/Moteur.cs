@@ -42,11 +42,6 @@ namespace ClassLibraryVoitureTH
             nbCV = _cloneMoteur.nbCV;
         }
 
-        
-
-
-
-
 
         public bool Demarrer()
 		{
@@ -68,13 +63,28 @@ namespace ClassLibraryVoitureTH
 		/// 
 		/// <param name="roueMotrice2"></param>
 		/// <param name="roueMotrice1"></param>
-		public void Entrainer(Roue roueMotrice2, Roue roueMotrice1)
+		/// 
+		public bool Entrainer(Roue roueMotrice2, Roue roueMotrice1)
 		{
-			if(estDemarre==true && roueMotrice1.Tourner()==false && roueMotrice2.Tourner() == false)
+			bool ok=false ;
+			if(estDemarre==true)
             {
-				roueMotrice1.Tourner();
-				roueMotrice2.Tourner();
+				bool okRoueMotrice1 =roueMotrice1.Tourner();
+				bool okRoueMotrice2 = roueMotrice2.Tourner();
+				ok = okRoueMotrice1 && okRoueMotrice2;
 			}
+			return ok;
+		}
+		public bool ArreterEntrainer(Roue roueMotrice2, Roue roueMotrice1)
+		{
+			bool ok = false;
+			if (estDemarre == true)
+			{
+				bool okRoueMotrice1 = roueMotrice1.ArretTourner();
+				bool okRoueMotrice2 = roueMotrice2.ArretTourner();
+				ok = okRoueMotrice1 && okRoueMotrice2;
+			}
+			return ok;
 		}
 
 	}//end Moteur

@@ -50,8 +50,23 @@ namespace ClassLibraryVoitureTH
             }
 			return aReussiAMettreEnRotation;
 		}
+		public bool ArretTourner()
+		{
+			bool aReussiAMettreEnRotation = false;
 
-        
-    }//end Roue
+			if (tourne == true)
+			{
+				aReussiAMettreEnRotation = true;
+				tourne = false;
+			}
+			else
+			{
+				aReussiAMettreEnRotation = false;
+			}
+			return aReussiAMettreEnRotation;
+		}
+
+
+	}//end Roue
 
 }//end namespace Voiture
