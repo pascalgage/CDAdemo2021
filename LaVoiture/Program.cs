@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibraryVoiture;
+
 namespace LaVoiture
 {
     class Program
@@ -15,10 +16,14 @@ namespace LaVoiture
             bmw.Allummer();
 
             bmw.Demarrer();
-            
-            bmw.Avancer();
 
-            bmw.Arreter();
+            
+
+            
+            
+            
+
+         
 
             Console.ReadKey();
         }
