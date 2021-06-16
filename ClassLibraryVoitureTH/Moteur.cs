@@ -21,6 +21,13 @@ namespace ClassLibraryVoitureTH
 			estDemarre = false;
 			nbCV = 4;
 		}
+		//avec interdépendance
+		//public Moteur()
+	 //  : this(false, 4)
+		//{
+		//}
+
+
 		//constructeur classique
 		public Moteur(bool estDemarre, int nbCV)
 		{
@@ -34,11 +41,7 @@ namespace ClassLibraryVoitureTH
             nbCV = _cloneMoteur.nbCV;
         }
 
-        //public Moteur(Moteur _cloneMoteur2)
-
-        //{
-        //	 :this(_cloneMoteur2.estDemarre, _cloneMoteur2.nbCV);
-        //}
+        
 
 
 

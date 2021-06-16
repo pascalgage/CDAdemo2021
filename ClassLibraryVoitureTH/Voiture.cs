@@ -17,48 +17,51 @@ namespace ClassLibraryVoitureTH
 	{
 
 		private int compteurEnKM;
-	
+		
 		private Moteur sonMoteur;
 
-		
+		private List<Roue> mesRoues;
 
-		Dictionary<string, Roue> mesRoues;
 
-		//constructeur par défaut
-		public Voiture()
-		{
-			compteurEnKM = 0;
+        //constructeur par défaut
+        public Voiture()
+        {
+            compteurEnKM = 0;
+			mesRoues = new List<Roue>();
 			sonMoteur = new Moteur();
-			
-			//initialisation de mesRoues
-			
-			mesRoues = new Dictionary<string, Roue>();
-			mesRoues.Add("roueMotriceavantDroite", new Roue());
-			mesRoues.Add("roueMotriceavantGauche", new Roue());
-			mesRoues.Add("roueARDroite", new Roue());
-			mesRoues.Add("roueARGauche", new Roue());
-		}
+
+        }
+       
 		//constructeur classique
-		private Voiture(int compteurEnKM, Moteur sonMoteur, Dictionary<string,Roue> mesRoues)
+		private Voiture(int compteurEnKM, Moteur sonMoteur, List<Roue> mesRoues)
         {
 			this.compteurEnKM = compteurEnKM;
 			this.sonMoteur = sonMoteur;
 			this.mesRoues = mesRoues;
         }
 
-		public Voiture(int compteurEnKM, bool estDemarre, int nbCV)
+		public Voiture(int compteurEnKM, bool estDemarre, int nbCV, List<Roue> mesRoues)
 		{
 			this.compteurEnKM = compteurEnKM;
 			this.sonMoteur = new Moteur(estDemarre,nbCV);
             
-            this.mesRoues = new Roue();//pareil
+            
 		}
 		//constructeur par recopie
 		public Voiture(Voiture _voitACopier)
         {
-			compteurEnKM = _voitACopier.compteurEnKM;
-			sonMoteur = new Moteur( _voitACopier.sonMoteur);
-			mesRoues = new Roue ();// pareil pour les Roues
+			//pour le compteur
+			this.compteurEnKM = _voitACopier.compteurEnKM;
+			//pour les roues
+			this.mesRoues = new List<Roue>();
+			this.mesRoues.Add(new Roue(_voitACopier.mesRoues[0]));
+			this.mesRoues.Add(new Roue(_voitACopier.mesRoues[1]));
+			this.mesRoues.Add(new Roue(_voitACopier.mesRoues[2]));
+			this.mesRoues.Add(new Roue(_voitACopier.mesRoues[3]));
+
+			//pour le moteur
+			this.sonMoteur = new Moteur( _voitACopier.sonMoteur);
+			
         }
 		
 
