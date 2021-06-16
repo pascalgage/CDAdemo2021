@@ -10,7 +10,8 @@
 
 namespace ClassLibraryVoitureTH
 {
-	public class Moteur {
+	public class Moteur 
+	{
 
 		private bool estDemarre;
 		private int nbCV;
@@ -47,16 +48,33 @@ namespace ClassLibraryVoitureTH
 
 
 
-        public bool Demarrer(){
+        public bool Demarrer()
+		{
+			bool aReussiADEMarrer = false;
 
-			return false;
+            if (estDemarre == false)
+            {
+				estDemarre = true;
+				aReussiADEMarrer = true;
+            }
+            else
+            {
+				aReussiADEMarrer = false;
+            }
+
+			return aReussiADEMarrer;
 		}
 
 		/// 
 		/// <param name="roueMotrice2"></param>
 		/// <param name="roueMotrice1"></param>
-		public void Entrainer(Roue roueMotrice2, Roue roueMotrice1){
-
+		public void Entrainer(Roue roueMotrice2, Roue roueMotrice1)
+		{
+			if(estDemarre==true && roueMotrice1.Tourner()==false && roueMotrice2.Tourner() == false)
+            {
+				roueMotrice1.Tourner();
+				roueMotrice2.Tourner();
+			}
 		}
 
 	}//end Moteur

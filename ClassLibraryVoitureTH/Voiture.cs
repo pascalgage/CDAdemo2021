@@ -65,19 +65,43 @@ namespace ClassLibraryVoitureTH
         }
 		
 
-		public bool Arreter(){
+		public bool Arreter()
+		{
 
 			return true;
 		}
 
-		public bool Avancer(){
-
-			return false;
+		public bool Avancer()
+		{
+			bool aReussiAvancer = false;
+			if (sonMoteur.Demarrer() == true && mesRoues[0].Tourner() == true && mesRoues[1].Tourner()==true)
+            {
+				mesRoues[0].Tourner();
+				mesRoues[1].Tourner();
+				aReussiAvancer = true;
+            }
+            else
+            {
+				aReussiAvancer = false;
+            }
+			return aReussiAvancer;
+			
 		}
 
-		public bool Demarrer(){
-
-			return false;
+		public bool Demarrer()
+		{
+			bool aREussiADemarrer = false;
+            if (sonMoteur.Demarrer() == true)
+            {
+				sonMoteur.Demarrer();
+				aREussiADemarrer = true;
+            }
+            else
+            {
+				aREussiADemarrer = false;
+            }
+			return aREussiADemarrer;
+			
 		}
 
 	}//end Voiture

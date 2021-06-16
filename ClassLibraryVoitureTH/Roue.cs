@@ -35,9 +35,20 @@ namespace ClassLibraryVoitureTH
 		}
 		
 
-		public bool Tourner(){
+		public bool Tourner()
+		{
+			bool aReussiAMettreEnRotation = false;
 
-			return false;
+            if (tourne == false)
+            {
+				aReussiAMettreEnRotation = true;
+				tourne = true;
+            }
+            else
+            {
+				aReussiAMettreEnRotation = false;
+            }
+			return aReussiAMettreEnRotation;
 		}
 
         
