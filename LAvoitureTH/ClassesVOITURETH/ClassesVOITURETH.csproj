@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CB1B27A4-D290-4B7A-9645-508B9FD2E366}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>LAvoitureTH</RootNamespace>
-    <AssemblyName>LAvoitureTH</AssemblyName>
+    <ProjectGuid>{BCB5E923-E1FA-47F4-B6A5-337DBED1109F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassesVOITURETH</RootNamespace>
+    <AssemblyName>ClassesVOITURETH</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Moteur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roue.cs" />
+    <Compile Include="Voiture.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="ClassesVOITURETH\ClassesVOITURETH.csproj">
-      <Project>{bcb5e923-e1fa-47f4-b6a5-337dbed1109f}</Project>
-      <Name>ClassesVOITURETH</Name>
-    </ProjectReference>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassLibraryVoitureTH.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
