@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAvoitureTH", "LAvoitureTH.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesVOITURETH", "ClassesVOITURETH\ClassesVOITURETH.csproj", "{BCB5E923-E1FA-47F4-B6A5-337DBED1109F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestVOITURETH", "UnitTestVOITURETH\UnitTestVOITURETH.csproj", "{9F263672-92A8-4B8A-ADD0-379CADA4CCF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BCB5E923-E1FA-47F4-B6A5-337DBED1109F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCB5E923-E1FA-47F4-B6A5-337DBED1109F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCB5E923-E1FA-47F4-B6A5-337DBED1109F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F263672-92A8-4B8A-ADD0-379CADA4CCF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F263672-92A8-4B8A-ADD0-379CADA4CCF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F263672-92A8-4B8A-ADD0-379CADA4CCF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F263672-92A8-4B8A-ADD0-379CADA4CCF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
