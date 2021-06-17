@@ -9,10 +9,31 @@ namespace UnitTestVOITURETH
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestMoteur()
         {
             Voiture bmw = new Voiture();
             Assert.AreEqual(bmw.SonMoteur.NbCV,4);
+        }
+
+        [TestMethod]
+        public void TestMoteur2()
+        {
+            Voiture bmw = new Voiture();
+            if (bmw.Demarrer())
+            {
+                Assert.AreEqual(bmw.SonMoteur.EstDemarre, true);
+            }
+            
+        }
+        [TestMethod]
+        public void TestMoteur3()
+        {
+            Voiture bmw = new Voiture();
+            if (bmw.Arreter())
+            {
+                Assert.AreEqual(bmw.MesRoues, false);
+            }
+
         }
     }
 }

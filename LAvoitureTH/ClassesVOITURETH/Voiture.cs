@@ -94,10 +94,12 @@ namespace ClassesVOITURETH
         
 		
 
-		public void Arreter()
+		public bool Arreter()
 		{
-
+			bool aReussiArreter=
 			this.sonMoteur.ArreterEntrainer(mesRoues[0], mesRoues[1]);
+
+			return aReussiArreter;
 		}
 
 		public bool Avancer()
