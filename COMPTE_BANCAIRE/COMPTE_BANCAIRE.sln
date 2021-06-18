@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMPTE_BANCAIRE", "COMPTE_BANCAIRE.csproj", "{2E899B2E-7A30-449C-8F5C-D7356CC307E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCOMPTE", "ClassLibraryCOMPTE\ClassLibraryCOMPTE.csproj", "{2E22E1A1-DEE5-4949-8C97-1DA64AF0DA4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E899B2E-7A30-449C-8F5C-D7356CC307E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E899B2E-7A30-449C-8F5C-D7356CC307E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E899B2E-7A30-449C-8F5C-D7356CC307E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E899B2E-7A30-449C-8F5C-D7356CC307E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E22E1A1-DEE5-4949-8C97-1DA64AF0DA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E22E1A1-DEE5-4949-8C97-1DA64AF0DA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E22E1A1-DEE5-4949-8C97-1DA64AF0DA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E22E1A1-DEE5-4949-8C97-1DA64AF0DA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85D732A5-FC79-4DDD-B3A5-7D1557F6EA80}
+	EndGlobalSection
+EndGlobal
