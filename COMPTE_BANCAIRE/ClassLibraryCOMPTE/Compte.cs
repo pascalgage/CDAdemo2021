@@ -29,6 +29,9 @@ namespace COMPTE_BANCAIRE
 			this.decouvertAutorise = _decouvertAutorise;
 		}
 
+		//Méthodes de COMPTE :
+
+		//Réaliser l'affichage console de l'état d'un COMPTE...
 
 		public override string ToString()
 		{
@@ -36,9 +39,11 @@ namespace COMPTE_BANCAIRE
 			return "Numero Cpte: "+numeroCompte+" NOM: "+nomProprietaire+" Solde: "+soldeDuCompte+" Decouvert autorisé: "+decouvertAutorise;
 		}
 
+		//Débiter un compte d'un certain montant dans le respect du découvert autorisé...
+
 		public bool Debiter(int montant)
 		{
-			bool debitPossible = false;
+			bool debitPossible;
 
 			if(montant <= this.soldeDuCompte - this.decouvertAutorise)
             {
@@ -53,10 +58,14 @@ namespace COMPTE_BANCAIRE
 			return debitPossible;
 		}
 
+		//Créditer un Compte d'une certaine somme...
+
 		public void Crediter(int montant)
 		{
 			this.soldeDuCompte += montant;
 		}
+
+		//Transfert une somme d'un Compte A vers un autre compte dans le respect du découvert Autorisé de A...
 
 		public bool Transferer(int montant, COMPTE _autreCompte)
 		{
@@ -64,7 +73,7 @@ namespace COMPTE_BANCAIRE
 
             if (this.Debiter(montant) == true)
             {
-				_autreCompte.soldeDuCompte += montant;
+				_autreCompte.Crediter(montant);
 				transfertOk = true;
             }
             else
@@ -74,6 +83,8 @@ namespace COMPTE_BANCAIRE
 
 			return transfertOk;
 		}
+
+		//Comparer un compte A à un autre Compte et dire s'il lui est supérieur ou inférieur...
 
 		public bool AunSoldeSuperieur(COMPTE _autreCompte)
 		{
@@ -97,4 +108,4 @@ namespace COMPTE_BANCAIRE
 
 	}//end COMPTE
 
-}//end namespace CompteBancaire
+}//end namespace COMPTE_BANCAIRE
