@@ -5,13 +5,15 @@ namespace COMPTE_BANCAIRE
 	public class COMPTE 
 	{
 
-		//Attributs
+		//Attributs de l'objet COMPTE
+
 		private uint numeroCompte;
 		private string nomProprietaire;
 		private int soldeDuCompte;
 		private int decouvertAutorise;
 
-		//Constructeur par défaut
+		//Constructeur par défaut de l'objet COMPTE
+
 		public COMPTE()
 		{
 			numeroCompte = 0000;
@@ -20,7 +22,8 @@ namespace COMPTE_BANCAIRE
 			decouvertAutorise = -500;
 		}
 
-		//Constructeur classique
+		//Constructeur classique de l'objet COMPTE
+
 		public COMPTE(uint _numeroCompte, string _nomProprietaire, int _soldeDuCompte, int _decouvertAutorise)
 		{
 			this.numeroCompte = _numeroCompte;
