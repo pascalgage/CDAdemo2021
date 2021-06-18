@@ -40,7 +40,15 @@ namespace COMPTE_BANCAIRE
 		{
 			bool debitPossible = false;
 
-			if()
+			if(montant <= this.soldeDuCompte - this.decouvertAutorise)
+            {
+				this.soldeDuCompte = this.soldeDuCompte - montant;
+				debitPossible = true;
+            }
+            else
+            {
+				debitPossible = false;
+            }
 
 			return debitPossible;
 		}
@@ -52,8 +60,19 @@ namespace COMPTE_BANCAIRE
 
 		public bool Transferer(int montant, COMPTE _autreCompte)
 		{
+			bool transfertOk = false;
 
-			return false;
+            if (this.Debiter(montant) == true)
+            {
+				_autreCompte.soldeDuCompte += montant;
+				transfertOk = true;
+            }
+            else
+            {
+				transfertOk = false;
+            }
+
+			return transfertOk;
 		}
 
 		public bool AunSoldeSuperieur(COMPTE _autreCompte)
@@ -63,11 +82,11 @@ namespace COMPTE_BANCAIRE
             if (this.soldeDuCompte < _autreCompte.soldeDuCompte )
             {
 				estSUpOK = true;
-				Console.WriteLine("Le compte de "+this.nomProprietaire+" est inférieur à "+_autreCompte.nomProprietaire);
+				Console.WriteLine("Le compte de "+this.nomProprietaire+" est inférieur à celui de "+_autreCompte.nomProprietaire);
             }
             else
             {
-				Console.WriteLine("Le compte de "+this.nomProprietaire+" est supérieur à "+_autreCompte.nomProprietaire);
+				Console.WriteLine("Le compte de "+this.nomProprietaire+" est supérieur à celui de  "+_autreCompte.nomProprietaire);
 
 			}
 

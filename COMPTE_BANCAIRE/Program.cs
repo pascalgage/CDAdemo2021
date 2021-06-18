@@ -15,7 +15,7 @@ namespace COMPTE_BANCAIRE
             COMPTE pascal = new COMPTE(23456, "pascal", 700,-300);
             COMPTE david = new COMPTE(123456, "David", 200, -750);
 
-            david.Crediter(800);
+            david.Transferer(950,pascal);
             pascal.AunSoldeSuperieur(david);
 
 
