@@ -43,9 +43,6 @@ namespace COMPTE_BANCAIRE
         }
 
 
-
-
-
 		//Méthodes de COMPTE :
 
 		//Réaliser l'affichage console de l'état d'un COMPTE...

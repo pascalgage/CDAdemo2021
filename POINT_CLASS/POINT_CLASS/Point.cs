@@ -48,39 +48,42 @@ namespace POINT_CLASS
 
         public Point ConstruireSymOrd(string _nom)
         {
-            Point F = new Point();
-            F.nom = _nom;
-            F.axeAbscisseX = (this.axeAbscisseX);
-            F.axeOrdonneeY=-(this.axeOrdonneeY);
+            Point f = new Point();
+            f.nom = _nom;
+            f.axeAbscisseX = (this.axeAbscisseX);
+            f.axeOrdonneeY=-(this.axeOrdonneeY);
             
-            return F;
+            return f;
         }
 
         public Point ConstruireSymAbs(string _nom)
         {
-            Point F = new Point();
-            F.nom = _nom;
-            F.axeAbscisseX = -(this.axeAbscisseX);
-            F.axeOrdonneeY = (this.axeOrdonneeY);
+            Point f = new Point();
+            f.nom = _nom;
+            f.axeAbscisseX = -(this.axeAbscisseX);
+            f.axeOrdonneeY = (this.axeOrdonneeY);
 
-            return F;
+            return f;
 
         }
 
         public Point ConstruireSymOr(string _nom)
         {
-            Point F = new Point();
-            F.nom = _nom;
-            F.axeAbscisseX = -(this.axeAbscisseX);
-            F.axeOrdonneeY = -(this.axeOrdonneeY);
+            Point f = new Point();
+            f.nom = _nom;
+            f.axeAbscisseX = -(this.axeAbscisseX);
+            f.axeOrdonneeY = -(this.axeOrdonneeY);
 
-            return F;
+            return f;
         }
 
 
         public void PermuterBissec()
-        {
 
+        {
+            float temp = this.axeAbscisseX;
+            this.axeAbscisseX = this.axeOrdonneeY;
+            this.axeOrdonneeY = temp;
         }
         
         

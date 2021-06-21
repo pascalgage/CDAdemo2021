@@ -18,7 +18,7 @@ namespace POINT_CLASS
             
 
             Point C = pointB.ConstruireSymOrd("C");
-            Console.WriteLine(C.ToString());
+            C.IndiquerPosition();
 
             
 
