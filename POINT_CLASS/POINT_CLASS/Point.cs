@@ -31,9 +31,9 @@ namespace POINT_CLASS
 
         }
         //méthodes...
-        public void IndiquerPosition()
+        public string IndiquerPosition()
         {
-            Console.WriteLine(ToString());
+            return ToString();
         }
 
         public void Deplacer(float _x,float _y)
