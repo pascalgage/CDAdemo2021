@@ -12,14 +12,17 @@ namespace COMPTE_BANCAIRE
         {
             COMPTE pasca = new COMPTE();
 
-            COMPTE pascal = new COMPTE(23456, "pascal", 700,-300);
+            COMPTE pascal = new COMPTE(23456, "Pascal", 700,-300);
             COMPTE david = new COMPTE(123456, "David", 200, -750);
-
+            
             david.Transferer(95,pascal);
+            david.Crediter(6000);
+            david.Debiter(3000);
+            david.Transferer(3700, pascal);
             pascal.AunSoldeSuperieur(david);
 
 
-
+            pascal.ChangerAutorisationDuDecouvert(-700);
             Console.WriteLine(pascal.ToString());
             Console.WriteLine(david.ToString());
 

@@ -12,25 +12,39 @@ namespace COMPTE_BANCAIRE
 		private int soldeDuCompte;
 		private int decouvertAutorise;
 
-		//Constructeur par défaut de l'objet COMPTE
+        //Constructeur par défaut de l'objet COMPTE
 
-		public COMPTE()
-		{
-			numeroCompte = 0000;
-			nomProprietaire = "Client";
-			soldeDuCompte = 0;
-			decouvertAutorise = -500;
-		}
+        public COMPTE()
+        {
+            numeroCompte = 0000;
+            nomProprietaire = "Client";
+            soldeDuCompte = 0;
+            decouvertAutorise = -500;
+        }
 
-		//Constructeur classique de l'objet COMPTE
+        //Constructeur classique de l'objet COMPTE
 
-		public COMPTE(uint _numeroCompte, string _nomProprietaire, int _soldeDuCompte, int _decouvertAutorise)
-		{
-			this.numeroCompte = _numeroCompte;
-			this.nomProprietaire = _nomProprietaire;
-			this.soldeDuCompte = _soldeDuCompte;
-			this.decouvertAutorise = _decouvertAutorise;
-		}
+        public COMPTE(uint _numeroCompte, string _nomProprietaire, int _soldeDuCompte, int _decouvertAutorise)
+        {
+            this.numeroCompte = _numeroCompte;
+            this.nomProprietaire = _nomProprietaire;
+            this.soldeDuCompte = _soldeDuCompte;
+            this.decouvertAutorise = _decouvertAutorise;
+        }
+
+        //Constructeur par clonage de l'objet COMPTE
+
+        public COMPTE( COMPTE _compteArecopie)
+        {
+			this.numeroCompte = _compteArecopie.numeroCompte;
+			this.nomProprietaire = _compteArecopie.nomProprietaire;
+			this.soldeDuCompte = _compteArecopie.soldeDuCompte;
+			this.decouvertAutorise = _compteArecopie.decouvertAutorise;
+        }
+
+
+
+
 
 		//Méthodes de COMPTE :
 
@@ -106,6 +120,12 @@ namespace COMPTE_BANCAIRE
 
 			return estSUpOK;
 		}
+		//Changer le découvert autorisé...
+
+		public void ChangerAutorisationDuDecouvert(int nouveauDecouvert)
+        {
+			this.decouvertAutorise = nouveauDecouvert;
+        }
 
 		
 
