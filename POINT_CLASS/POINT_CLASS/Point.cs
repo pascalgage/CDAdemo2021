@@ -1,0 +1,90 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POINT_CLASS
+{
+    public class Point
+    {
+        //attributs...
+        private string nom;
+        private float axeAbscisseX;
+        private float axeOrdonneeY;
+        //propriétés...
+        public string Nom { get => nom; }
+        public float AxeAbscisseX { get => axeAbscisseX;  }
+        public float AxeOrdonneeY { get => axeOrdonneeY;  }
+        //constructeur...
+        public Point(string _nom,float _axeAbscisseX,float _axeOrdonneeY)
+        {
+            this.nom = _nom;
+            this.axeAbscisseX = _axeAbscisseX;
+            this.axeOrdonneeY = _axeOrdonneeY;
+        }
+        public Point()
+        {
+            this.nom = " ";
+            this.axeAbscisseX = 0;
+            this.axeOrdonneeY = 0;
+
+        }
+        //méthodes...
+        public void IndiquerPosition()
+        {
+            Console.WriteLine(ToString());
+        }
+
+        public void Deplacer(float _x,float _y)
+        {
+            this.axeAbscisseX = _x;
+            this.axeOrdonneeY = _y;
+        }
+        public override string ToString()
+        {
+            return "Le point appelé "+nom+" Abscisse est: " + axeAbscisseX + " Ordonnee est: " + axeOrdonneeY;
+        }
+
+        public Point ConstruireSymOrd(string _nom)
+        {
+            Point F = new Point();
+            F.nom = _nom;
+            F.axeAbscisseX = (this.axeAbscisseX);
+            F.axeOrdonneeY=-(this.axeOrdonneeY);
+            
+            return F;
+        }
+
+        public Point ConstruireSymAbs(string _nom)
+        {
+            Point F = new Point();
+            F.nom = _nom;
+            F.axeAbscisseX = -(this.axeAbscisseX);
+            F.axeOrdonneeY = (this.axeOrdonneeY);
+
+            return F;
+
+        }
+
+        public Point ConstruireSymOr(string _nom)
+        {
+            Point F = new Point();
+            F.nom = _nom;
+            F.axeAbscisseX = -(this.axeAbscisseX);
+            F.axeOrdonneeY = -(this.axeOrdonneeY);
+
+            return F;
+        }
+
+
+        public void PermuterBissec()
+        {
+
+        }
+        
+        
+
+        
+    }
+}
