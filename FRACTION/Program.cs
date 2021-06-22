@@ -17,32 +17,7 @@ namespace FRACTION_CLASS
             Fraction f = new Fraction(128,64);
             Fraction g = new Fraction(6, 3);
 
-            if (d.SuperieurA(e) == true)
-            {
-                Console.WriteLine("La fraction " + d + " est supérieur à " + e);
-            }
-            else
-            {
-                Console.WriteLine("N'est pas supérieur !");
-            }
-
-            if (d.EgalA(e) == true)
-            {
-                Console.WriteLine("La fraction " + d + " est égale à " + e);
-            }
-            else   
-            {
-                Console.WriteLine("N'est pas égal !");
-            }
-            if (d.EstInferieurA(e) == true)
-            {
-                Console.WriteLine("La fraction " +g + " est inférieure à " + f);
-            }
-            else
-            {
-                Console.WriteLine("N'est pas supérieure !!!");
-            }
-
+            
             Console.WriteLine(f.GetPgcd());
             f.Reduire();
 
