@@ -140,7 +140,7 @@ namespace FRACTION_CLASS
         public int GetPgcd()
         {
             //Méthode "Last" recherche PGCD.
-            List<int> TAB = new List<int>();
+            List<int> tab = new List<int>();
 
 
             int numerateur = this.numerateur;
@@ -171,12 +171,12 @@ namespace FRACTION_CLASS
 
                 if (numerateur % D == 0 && denominateur % D == 0)
                 {
-                    TAB.Add(D);
+                    tab.Add(D);
                 }
 
             } while (D < numerateur && D < denominateur);
 
-            return TAB.Last();
+            return tab.Last();
 
 
         }
