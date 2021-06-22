@@ -27,7 +27,7 @@ namespace FRACTION_CLASS
         }
 
         //Constructeur Classique...
-        //public Fraction(int _numerateur,int _denominateur)
+        //public Fraction(int _numerateur, int _denominateur)
         //{
         //    this.numerateur = _numerateur;
         //    this.denominateur = _denominateur;
@@ -54,18 +54,11 @@ namespace FRACTION_CLASS
 
         }
 
-
-
-
-
-
-
-
         public override string ToString()
         {
             string chaineFraction = "";
 
-            if (this.denominateur == 1)
+            if (this.denominateur == 1| this.denominateur==0)
             {
                 chaineFraction += this.numerateur;
             }
@@ -91,6 +84,101 @@ namespace FRACTION_CLASS
             }
 
             return chaineFraction;
+        }
+
+        private decimal Evalue(decimal n, decimal d)
+        {
+            decimal resultN;
+            resultN = n / d;
+            resultN = (Math.Round(resultN, 4));
+            return resultN;
+        }
+
+        public bool SuperieurA(Fraction _autreFraction)
+        {
+            bool estSup=false;
+
+            if(this.Evalue(this.numerateur, this.denominateur) > _autreFraction.Evalue(_autreFraction.numerateur, _autreFraction.denominateur))
+            {
+                estSup = true;
+            }
+            else
+            {
+                estSup = false;
+            }
+            return estSup;
+        }
+        
+        public bool EgalA(Fraction _autreFraction)
+        {
+            bool estEgalA = false;
+            if (this.Evalue(this.numerateur, this.denominateur) == _autreFraction.Evalue(_autreFraction.numerateur, _autreFraction.denominateur))
+            {
+                estEgalA = true;
+            }
+            else
+            {
+                estEgalA = false;
+            }
+            return estEgalA;
+        }
+
+        public bool EstInferieurA(Fraction _autreFraction)
+        {
+            bool estInf = false;
+
+            if (this.Evalue(this.numerateur, this.denominateur) < _autreFraction.Evalue(_autreFraction.numerateur, _autreFraction.denominateur))
+            {
+                estInf = true;
+            }
+            else
+            {
+                estInf = false;
+            }
+            return estInf;
+        }
+        public int GetPgcd()
+        {
+            //Méthode "Last" recherche PGCD.
+            List<int> TAB = new List<int>();
+
+
+            int numerateur = this.numerateur;
+            int denominateur = this.denominateur;
+
+            int D = 0;
+
+            if (numerateur < 0)
+            {
+                numerateur = -numerateur;
+            }
+
+            if (denominateur < 0)
+            {
+                denominateur = -denominateur;
+            }
+
+            if (numerateur < 0 && denominateur < 0)
+            {
+                numerateur = -(numerateur);
+                denominateur = -(denominateur);
+            }
+
+            do
+            {
+
+                D++;
+
+                if (numerateur % D == 0 && denominateur % D == 0)
+                {
+                    TAB.Add(D);
+                }
+
+            } while (D < numerateur && D < denominateur);
+
+            return TAB.Last();
+
+
         }
 
     }
