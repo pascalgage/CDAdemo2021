@@ -181,5 +181,32 @@ namespace FRACTION_CLASS
 
         }
 
+        public void Reduire()
+
+        {
+            if (this.denominateur / this.GetPgcd() == 1 || this.denominateur / this.GetPgcd() == -1 || this.numerateur == 0)
+            {
+                Console.WriteLine(this.numerateur / this.GetPgcd());
+            }
+            else
+            {
+                if (this.denominateur / this.GetPgcd() < 0)
+                {
+                    if (this.numerateur / this.GetPgcd() > 0)
+                    {
+                        Console.WriteLine(-this.numerateur / this.GetPgcd() + "/" + -this.denominateur / this.GetPgcd());
+                    }
+                    else
+                    {
+                        Console.WriteLine(-this.numerateur / this.GetPgcd() + "/" + -this.denominateur / this.GetPgcd());
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(this.numerateur / this.GetPgcd() + "/" + this.denominateur / this.GetPgcd());
+                }
+            }
+        }
+
     }
 }
