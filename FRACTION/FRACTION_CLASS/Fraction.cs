@@ -189,6 +189,13 @@ namespace FRACTION_CLASS
         public void Reduire()
 
         {
+            int a = numerateur;
+            int b = denominateur;
+
+
+            if (a < 0) a = -a;
+            if (b < 0) b = -b;
+
             int pgcd = this.GetPgcd();
             numerateur = numerateur / pgcd;
             denominateur = denominateur / pgcd;

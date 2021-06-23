@@ -11,19 +11,18 @@ namespace FRACTION_CLASS
     {
         static void Main(string[] args)
         {
-            Fraction d = new Fraction(1,-2);
-            Fraction e = new Fraction(5,4);
+            Fraction d = new Fraction(12,7);
+            Fraction e = new Fraction(5400,-1350);
 
             Fraction f = new Fraction(128,64);
             Fraction g = new Fraction(6, 3);
 
             Console.WriteLine(d.GetPgcd());
-            Console.WriteLine(f.GetPgcd());
-            f.Reduire();
-            Console.WriteLine(f);
-            d.Reduire();
             Console.WriteLine(d);
             Console.WriteLine(d.ToString());
+
+            e.Reduire();
+            Console.WriteLine(e);
 
             Console.ReadKey();
         }
