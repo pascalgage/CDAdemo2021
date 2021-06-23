@@ -194,7 +194,7 @@ namespace FRACTION_CLASS
             return test;
         }
 
-        private int GetPgcd()
+        public int GetPgcd()
         {
          //Méthode "Last" recherche PGCD.
             List<int> TAB = new List<int>();
@@ -238,7 +238,7 @@ namespace FRACTION_CLASS
 
         }
 
-        private void Reduire()
+        public void Reduire()
 
         {
             int a = numerateur;

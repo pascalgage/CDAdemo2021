@@ -53,6 +53,7 @@ namespace FRACTION_APP
                 Console.WriteLine(" ");
                 Console.WriteLine("La division des deux fractions est égale à: "); Console.WriteLine(F1.Divise(F2));
                 Console.WriteLine(" ");
+                
                 F1.Superieur(F2);
                 F1.Inferieur(F2);
                 F1.Egal(F2);
@@ -66,6 +67,12 @@ namespace FRACTION_APP
                 F1.Oppose();
                 Console.Write("L'opposé de la fraction " + F2.ToString() + " est: ");
                 F2.Oppose();
+                Console.WriteLine(" ");
+                F1.Reduire();
+                Console.WriteLine("La réduction de la fraction " + N + "/" + D + " est :"); Console.WriteLine(F1);
+                Console.WriteLine(" ");
+                F2.Reduire();
+                Console.WriteLine("La réduction de la fraction " + M + "/" + E + " est :"); Console.WriteLine(F2);
                 Console.WriteLine(" ");
 
 
