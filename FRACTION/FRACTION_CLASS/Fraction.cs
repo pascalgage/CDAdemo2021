@@ -12,6 +12,10 @@ namespace FRACTION_CLASS
         private int numerateur;
         private int denominateur;
 
+        public int Numerateur { get => numerateur;  }
+        public int Denominateur { get => denominateur; }
+
+
         //Constructeur hybride...
         public Fraction(int _numerateur)
         {
@@ -146,6 +150,11 @@ namespace FRACTION_CLASS
             int numerateur = this.numerateur;
             int denominateur = this.denominateur;
 
+            //int a = numerateur;
+            //int b = denominateur;
+            //if (a < 0) a = -a;
+            //if (b < 0) b = -b;
+
             int D = 0;
 
             if (numerateur < 0)
@@ -158,11 +167,7 @@ namespace FRACTION_CLASS
                 denominateur = -denominateur;
             }
 
-            if (numerateur < 0 && denominateur < 0)
-            {
-                numerateur = -(numerateur);
-                denominateur = -(denominateur);
-            }
+           
 
             do
             {
@@ -184,28 +189,9 @@ namespace FRACTION_CLASS
         public void Reduire()
 
         {
-            if (this.denominateur / this.GetPgcd() == 1 || this.denominateur / this.GetPgcd() == -1 || this.numerateur == 0)
-            {
-                Console.WriteLine(this.numerateur / this.GetPgcd());
-            }
-            else
-            {
-                if (this.denominateur / this.GetPgcd() < 0)
-                {
-                    if (this.numerateur / this.GetPgcd() > 0)
-                    {
-                        Console.WriteLine(-this.numerateur / this.GetPgcd() + "/" + -this.denominateur / this.GetPgcd());
-                    }
-                    else
-                    {
-                        Console.WriteLine(-this.numerateur / this.GetPgcd() + "/" + -this.denominateur / this.GetPgcd());
-                    }
-                }
-                else
-                {
-                    Console.WriteLine(this.numerateur / this.GetPgcd() + "/" + this.denominateur / this.GetPgcd());
-                }
-            }
+            int pgcd = this.GetPgcd();
+            numerateur = numerateur / pgcd;
+            denominateur = denominateur / pgcd;
         }
 
     }
