@@ -39,12 +39,6 @@ namespace FRACTION_CLASS
 
 
 
-        //Constructeur Classique...
-        //public Fraction(int _numerateur, int _denominateur)
-        //{
-        //    this.numerateur = _numerateur;
-        //    this.denominateur = _denominateur;
-        //}
 
 
         //Constructeur classique avec exception...
@@ -82,23 +76,6 @@ namespace FRACTION_CLASS
                 return numerateur + "/" + denominateur;
             }
         }
-
-
-        //public override string ToString()
-        //{
-        //    int modulo = this.numerateur % this.denominateur;
-
-        //    if (modulo == 0)
-        //    {
-        //        return  ""+numerateur / denominateur+"";
-        //    }
-        //    else
-        //    {
-        //        return "" + numerateur + "/" + denominateur + "";
-        //    }
-
-        //}
-
 
 
         private decimal Evalue(decimal n, decimal d)
