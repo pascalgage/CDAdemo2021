@@ -17,7 +17,8 @@ namespace FRACTION_CLASS
             Fraction f = new Fraction(-128,64);
             Fraction g = new Fraction(-6,-3);
 
-            
+            Fraction res=d.Moins(e);
+            Console.WriteLine(res.ToString());
 
             Console.ReadKey();
         }
