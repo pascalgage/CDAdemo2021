@@ -13,7 +13,8 @@ namespace FRACTION_CLASS
         private int denominateur;
 
         public int Numerateur { get => numerateur;  }
-        public int Denominateur { get => denominateur; }
+        public int Denominateur { get => denominateur; set => denominateur =value; }
+        
 
 
         //Constructeur hybride...
@@ -29,6 +30,14 @@ namespace FRACTION_CLASS
             this.numerateur = 0;
             this.denominateur = 1;
         }
+        //Constructeur par recopie....
+        public Fraction (Fraction a_recopie)
+        {
+            this.numerateur = a_recopie.numerateur;
+            this.denominateur = a_recopie.denominateur;
+        }
+
+
 
         //Constructeur Classique...
         //public Fraction(int _numerateur, int _denominateur)
@@ -36,6 +45,8 @@ namespace FRACTION_CLASS
         //    this.numerateur = _numerateur;
         //    this.denominateur = _denominateur;
         //}
+
+
         //Constructeur classique avec exception...
         public Fraction(int _numerateur, int _denominateur)
         {
@@ -58,37 +69,37 @@ namespace FRACTION_CLASS
 
         }
 
+
+
         public override string ToString()
         {
-            string chaineFraction = "";
-
-            if (this.denominateur == 1| this.denominateur==0)
+            if (denominateur == 1)
             {
-                chaineFraction += this.numerateur;
+                return numerateur.ToString();
             }
             else
             {
-
-                if (this.denominateur < 0)
-                {
-                    if (this.numerateur > 0)
-                    {
-                        chaineFraction += (-this.numerateur) + "/" + (-this.denominateur);
-                    }
-                    else
-                    {
-                        chaineFraction += (-this.numerateur) + "/" + (-this.denominateur);
-
-                    }
-                }
-                else
-                {
-                    chaineFraction += this.numerateur + "/" + this.denominateur;
-                }
+                return numerateur + "/" + denominateur;
             }
-
-            return chaineFraction;
         }
+
+
+        //public override string ToString()
+        //{
+        //    int modulo = this.numerateur % this.denominateur;
+
+        //    if (modulo == 0)
+        //    {
+        //        return  ""+numerateur / denominateur+"";
+        //    }
+        //    else
+        //    {
+        //        return "" + numerateur + "/" + denominateur + "";
+        //    }
+
+        //}
+
+
 
         private decimal Evalue(decimal n, decimal d)
         {
@@ -141,6 +152,7 @@ namespace FRACTION_CLASS
             }
             return estInf;
         }
+
         public int GetPgcd()
         {
             //Méthode "Last" recherche PGCD.
@@ -150,13 +162,7 @@ namespace FRACTION_CLASS
             int numerateur = this.numerateur;
             int denominateur = this.denominateur;
 
-            //int a = numerateur;
-            //int b = denominateur;
-            //if (a < 0) a = -a;
-            //if (b < 0) b = -b;
-
-            int D = 0;
-
+            
             if (numerateur < 0)
             {
                 numerateur = -numerateur;
@@ -167,7 +173,7 @@ namespace FRACTION_CLASS
                 denominateur = -denominateur;
             }
 
-           
+            int D = 0;
 
             do
             {
@@ -187,19 +193,82 @@ namespace FRACTION_CLASS
         }
 
         public void Reduire()
-
         {
-            int a = numerateur;
-            int b = denominateur;
-
-
-            if (a < 0) a = -a;
-            if (b < 0) b = -b;
+            
+          if (denominateur < 0)
+           {
+             numerateur = -numerateur;
+             denominateur = -denominateur;
+           }
 
             int pgcd = this.GetPgcd();
             numerateur = numerateur / pgcd;
             denominateur = denominateur / pgcd;
         }
+
+        public void GestionSigne()
+        {
+            if (denominateur < 0)
+            {
+                numerateur = -numerateur;
+                denominateur = -denominateur;
+            }
+        }
+
+        public void Inverse()
+        {
+            int temp = this.numerateur;
+            this.numerateur = this.denominateur;
+            this.denominateur = temp;
+        }
+
+        public Fraction Plus(Fraction _autreFrac)
+        {
+            int n;
+            int d;
+            n = (this.numerateur * _autreFrac.denominateur) + (_autreFrac.numerateur * this.denominateur);
+            d = (this.denominateur * _autreFrac.denominateur);
+
+            Fraction p;
+            p = new Fraction(n, d);
+            p.Reduire();
+            return p;
+        }
+
+        public Fraction Moins(Fraction _autreFrac)
+        {
+            int n;
+            int d;
+            n = (this.numerateur * _autreFrac.denominateur) - (_autreFrac.numerateur * this.denominateur);
+            d = (this.denominateur * _autreFrac.denominateur);
+
+            Fraction p;
+            p = new Fraction(n, d);
+            p.Reduire();
+            return p;
+        }
+
+        public Fraction Multiplie(Fraction _autreFrac)
+        {
+            Fraction t = new Fraction((this.numerateur * _autreFrac.numerateur), (this.denominateur * _autreFrac.denominateur));
+            t.Reduire();
+            return t;
+        }
+
+        //pour la méthode Divise nous utiliserons Inverse() et le clonage....
+
+        public Fraction Divise(Fraction _autreFrac)
+        {
+            Fraction t;
+            Fraction clonee = new Fraction(_autreFrac);
+            clonee.Inverse();
+            t=this.Multiplie(clonee);
+
+            t.Reduire();
+            return t;
+        }
+        
+        
 
     }
 }
