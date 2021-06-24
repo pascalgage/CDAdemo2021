@@ -13,7 +13,7 @@ namespace FRACTION_CLASS
         private int denominateur;
 
         public int Numerateur { get => numerateur;  }
-        public int Denominateur { get => denominateur; set => denominateur =value; }
+        public int Denominateur { get => denominateur; }
         
 
 
@@ -59,6 +59,7 @@ namespace FRACTION_CLASS
 
         }
 
+        //Méthode d'affichage finale de Fraction...
         public override string ToString()
         {
             if (denominateur == 1 || numerateur==0)
@@ -71,7 +72,7 @@ namespace FRACTION_CLASS
             }
 
         }
-
+        //Méthode qui permet d'obtenir le résultat numérique de Fraction...
         private decimal Evalue(decimal n, decimal d)
         {
             decimal resultN;
@@ -79,7 +80,7 @@ namespace FRACTION_CLASS
             resultN = (Math.Round(resultN, 4));
             return resultN;
         }
-
+        //Méthode de comparaison de deux fractions...
         public bool SuperieurA(Fraction _autreFraction)
         {
             bool estSup=false;
@@ -94,7 +95,7 @@ namespace FRACTION_CLASS
             }
             return estSup;
         }
-        
+        //Méthode de comparaison de deux fractions...
         public bool EgalA(Fraction _autreFraction)
         {
             bool estEgalA = false;
@@ -108,7 +109,7 @@ namespace FRACTION_CLASS
             }
             return estEgalA;
         }
-
+        //Méthode de comparaison de deux fractions...
         public bool EstInferieurA(Fraction _autreFraction)
         {
             bool estInf = false;
@@ -123,7 +124,7 @@ namespace FRACTION_CLASS
             }
             return estInf;
         }
-
+        //Méthode qui vise à calculer le PGCD d'une fraction...
         public int GetPgcd()
         {
             //Méthode "Last" recherche PGCD.
@@ -162,7 +163,7 @@ namespace FRACTION_CLASS
 
 
         }
-
+        //Méthode de réduction de fraction...
         public void Reduire()
         {
             
@@ -176,7 +177,7 @@ namespace FRACTION_CLASS
             numerateur = numerateur / pgcd;
             denominateur = denominateur / pgcd;
         }
-
+        //Méthode de gestion du signe de la fraction...
         public void GestionSigne()
         {
             
@@ -187,14 +188,14 @@ namespace FRACTION_CLASS
             }
             
         }
-
+        //Méthode qui vise à inverser une fraction...réutilisée dans méthode Divise()...
         public void Inverse()
         {
             int temp = this.numerateur;
             this.numerateur = this.denominateur;
             this.denominateur = temp;
         }
-
+        //Addition.
         public Fraction Plus(Fraction _autreFrac)
         {
             int n;
@@ -207,7 +208,7 @@ namespace FRACTION_CLASS
             p.Reduire();
             return p;
         }
-
+        //Soustraction.
         public Fraction Moins(Fraction _autreFrac)
         {
             int n;
@@ -220,7 +221,7 @@ namespace FRACTION_CLASS
             p.Reduire();
             return p;
         }
-
+        //Multiplication.
         public Fraction Multiplie(Fraction _autreFrac)
         {
             Fraction t = new Fraction((this.numerateur * _autreFrac.numerateur), (this.denominateur * _autreFrac.denominateur));
@@ -229,7 +230,6 @@ namespace FRACTION_CLASS
         }
 
         //pour la méthode Divise nous utiliserons Inverse() et le clonage....
-
         public Fraction Divise(Fraction _autreFrac)
         {
             Fraction t;
