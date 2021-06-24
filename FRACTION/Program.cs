@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using FRACTION_CLASS;
 
 namespace FRACTION_CLASS
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -56,8 +56,27 @@ namespace FRACTION_CLASS
             resDivis.GestionSigne();
             Console.WriteLine(resDivis.ToString());
 
+            Console.WriteLine("");
 
+            Console.WriteLine("REDUCTION de : "+a + " / " + b);
+            c.Reduire();
+            c.GestionSigne();
+            Console.WriteLine(c.ToString());
 
+            Console.WriteLine("REDUCTION de : " + d + " / " + e);
+            f.Reduire();
+            f.GestionSigne();
+            Console.WriteLine(f.ToString());
+
+            Console.WriteLine("");
+
+            Console.WriteLine("VALEUR NUMERIQUE de : " + a + " / " + b);
+            Console.WriteLine(c.Evalue(a,b));
+
+            Console.WriteLine("VALEUR NUMERIQUE de : " + d + " / " + e);
+            Console.WriteLine(f.Evalue(d,e));
+            
+            
 
             Console.ReadKey();
         }
