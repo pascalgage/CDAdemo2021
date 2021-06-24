@@ -119,10 +119,10 @@ namespace COMPTE_BANCAIRE
 		}
 		//Changer le découvert autorisé...
 
-		public void ChangerAutorisationDuDecouvert(int nouveauDecouvert)
-        {
-			this.decouvertAutorise = nouveauDecouvert;
-        }
+		//public void ChangerAutorisationDuDecouvert(int nouveauDecouvert)
+  //      {
+		//	this.decouvertAutorise = nouveauDecouvert;
+  //      }
 
 		
 
