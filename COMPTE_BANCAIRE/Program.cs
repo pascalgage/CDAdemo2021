@@ -33,6 +33,8 @@ namespace COMPTE_BANCAIRE
 
             Banque pg = new Banque("Credit Agricole", "Colmar");
             pg.AjouteCompte(david);
+            pg.AjouteCompte(pascal);
+            pg.AjouteCompte(moris);
             Console.WriteLine(pg.ToString());
 
             Console.ReadKey();

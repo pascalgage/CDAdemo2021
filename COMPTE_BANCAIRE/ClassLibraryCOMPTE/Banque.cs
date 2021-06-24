@@ -24,6 +24,7 @@ namespace ClassLibraryCOMPTE
 
         }
 
+
         //Méthodes de l'objet Banque...
 
         public void AjouteCompte(COMPTE _unCompte)
@@ -33,16 +34,18 @@ namespace ClassLibraryCOMPTE
         }
 
 
-        private void AjouteCompte(uint _num,string _nom,int _solde, int _decouvertAutorise)
-        {
-            this.mesComptes.Add(new COMPTE(_num, _nom,_solde,_decouvertAutorise));
-        }
-
-        
-
         public override string ToString()
         {
-            return ""+nom_banque+" "+ville_banque+""+mesComptes;
+            string lesComptes;
+
+            lesComptes= " "+nom_banque+" "+ville_banque+":";
+
+            for (int i = 0; i < this.nbrComptes; i++)
+            {
+                lesComptes += this.mesComptes[i].ToString() + "\n";
+            }
+
+            return lesComptes;
         }
     }
 }
