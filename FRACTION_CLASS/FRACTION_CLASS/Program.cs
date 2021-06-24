@@ -73,8 +73,7 @@ namespace FRACTION_APP
                 Console.WriteLine(" ");
                 F2.Reduire();
                 Console.WriteLine("La réduction de la fraction " + M + "/" + E + " est :"); Console.WriteLine(F2);
-                Console.WriteLine("Soit: ");Console.WriteLine(F2.ToString());
-                Console.WriteLine(" ");
+                
 
 
                 //Fin du calculateur...Procédure recommencer !Do..While!
