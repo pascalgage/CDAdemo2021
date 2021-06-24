@@ -37,10 +37,6 @@ namespace FRACTION_CLASS
             this.denominateur = a_recopie.denominateur;
         }
 
-
-
-
-
         //Constructeur classique avec exception...
         public Fraction(int _numerateur, int _denominateur)
         {
@@ -63,8 +59,6 @@ namespace FRACTION_CLASS
 
         }
 
-
-
         public override string ToString()
         {
             if (denominateur == 1)
@@ -76,7 +70,6 @@ namespace FRACTION_CLASS
                 return numerateur + "/" + denominateur;
             }
         }
-
 
         private decimal Evalue(decimal n, decimal d)
         {
