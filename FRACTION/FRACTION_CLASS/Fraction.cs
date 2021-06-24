@@ -61,7 +61,7 @@ namespace FRACTION_CLASS
 
         public override string ToString()
         {
-            if (denominateur == 1)
+            if (denominateur == 1 || numerateur==0)
             {
                 return numerateur.ToString();
             }
@@ -69,6 +69,7 @@ namespace FRACTION_CLASS
             {
                 return numerateur + "/" + denominateur;
             }
+
         }
 
         private decimal Evalue(decimal n, decimal d)
@@ -178,11 +179,13 @@ namespace FRACTION_CLASS
 
         public void GestionSigne()
         {
+            
             if (denominateur < 0)
             {
                 numerateur = -numerateur;
                 denominateur = -denominateur;
             }
+            
         }
 
         public void Inverse()
