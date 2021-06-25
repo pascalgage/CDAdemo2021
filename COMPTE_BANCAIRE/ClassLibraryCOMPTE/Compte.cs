@@ -12,6 +12,8 @@ namespace COMPTE_BANCAIRE
 		private int soldeDuCompte;
 		private int decouvertAutorise;
 
+        public int SoldeDuCompte { get => soldeDuCompte; }
+
         //Constructeur par défaut de l'objet COMPTE
 
         public COMPTE()

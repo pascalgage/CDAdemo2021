@@ -40,6 +40,21 @@ namespace ClassLibraryCOMPTE
             AjouteCompte(nouveauCompte);
         }
 
+        public COMPTE CompteSup()
+        {
+            int comptesolde = 0;
+            COMPTE maxiCompte = null;
+
+            for (int i = 0; i < mesComptes.Count; i++)
+            {
+                if(mesComptes[i].SoldeDuCompte > comptesolde)
+                {
+                    comptesolde = mesComptes[i].SoldeDuCompte;
+                    maxiCompte = mesComptes[i];
+                }
+            }
+            return maxiCompte;
+        }
 
         public override string ToString()
         {
