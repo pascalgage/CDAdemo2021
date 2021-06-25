@@ -12,38 +12,23 @@ namespace COMPTE_BANCAIRE
     {
         static void Main(string[] args)
         {
-            COMPTE pasca = new COMPTE();
+            Banque bnp = new Banque("BNP ", " PARIS Xème");
+            
+            bnp.AjouteCompte(978486, "Pascal", 10000, -100);
+            bnp.AjouteCompte(789456, "David", 3000, -100);
+            bnp.AjouteCompte(123456, "Doris", 2500, -250);
+            Console.WriteLine(bnp);
 
-            COMPTE pascal = new COMPTE(123456, "Pascal", 700,-300);
-            COMPTE david = new COMPTE(123456, "David", 200, -750);
-            COMPTE doris = new COMPTE(123456, "moris", 300, -600);
+            if(bnp.Transferer(978486, 123456, 10095))
+            {
+                Console.WriteLine("Opération effectuée !");
+            }
+            else
+            {
+                Console.WriteLine("Opération impossible !");
+            }
 
-            david.Transferer(95,pascal);
-            david.Crediter(6000);
-            david.Debiter(3000);
-            david.Transferer(3700, pascal);
-            pascal.AunSoldeSuperieur(david);
-
-
-           
-            Console.WriteLine(pascal.ToString());
-            Console.WriteLine(david.ToString());
-
-
-
-            Banque pg = new Banque("Credit Agricole", "Colmar");
-            pg.AjouteCompte(456789,"DAVID",200,-750);
-            pg.AjouteCompte(321654,"pascal",700,-300);
-            pg.AjouteCompte(159159,"Doris",300,-600);
-            pg.AjouteCompte(978486,"Richard",702,-300);
-            Console.WriteLine(pg.ToString());
-
-            Console.WriteLine(pg.CompteSup());
-            Console.WriteLine(pg.RendCompte(321654));
-
-            pg.Transferer(456789, 321654, 100);
-            Console.WriteLine(pg.ToString());
-
+            Console.WriteLine(bnp);
             Console.ReadKey();
         }
     }
