@@ -9,7 +9,7 @@ namespace ClassLibraryCOMPTE
 {
     public class Banque
     {
-        private COMPTE[] mesComptes;
+        private List<COMPTE> mesComptes;
         private int nbrComptes;
         private string nom_banque;
         private string ville_banque;
@@ -17,32 +17,39 @@ namespace ClassLibraryCOMPTE
         //Constructeur de l'objet Banque....
         public Banque(string _nom_banque, string _ville_banque)
         {
-            this.nom_banque = _nom_banque;
-            this.ville_banque = _ville_banque;
-            mesComptes = new COMPTE[20];
-            this.nbrComptes = 0;
+            nom_banque = _nom_banque;
+            ville_banque = _ville_banque;
+            mesComptes = new List<COMPTE>();
+            nbrComptes = 0;
 
         }
 
 
         //Méthodes de l'objet Banque...
 
-        public void AjouteCompte(COMPTE _unCompte)
+
+        private void AjouteCompte(COMPTE _unCompte)
         {
-            this.mesComptes[nbrComptes]=_unCompte;
+            mesComptes.Add(_unCompte);
             nbrComptes++;
+        }
+
+        public void AjouteCompte(uint _numeroCompte, string _nomProprietaire, int _soldeDuCompte, int _decouvertAutorise)
+        {
+            COMPTE nouveauCompte = new COMPTE(_numeroCompte, _nomProprietaire, _soldeDuCompte, _decouvertAutorise);
+            AjouteCompte(nouveauCompte);
         }
 
 
         public override string ToString()
         {
-            string lesComptes;
+            string lesComptes="";
 
-            lesComptes= " "+nom_banque+" "+ville_banque+":";
+            lesComptes= " "+nom_banque+" "+ville_banque+":"+"\n" + lesComptes;
 
-            for (int i = 0; i < this.nbrComptes; i++)
+            for (int i = 0; i <nbrComptes; i++)
             {
-                lesComptes += this.mesComptes[i].ToString() + "\n";
+                lesComptes += mesComptes[i].ToString() + "\n";
             }
 
             return lesComptes;

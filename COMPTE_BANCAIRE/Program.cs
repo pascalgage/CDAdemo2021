@@ -14,9 +14,9 @@ namespace COMPTE_BANCAIRE
         {
             COMPTE pasca = new COMPTE();
 
-            COMPTE pascal = new COMPTE(23456, "Pascal", 700,-300);
+            COMPTE pascal = new COMPTE(123456, "Pascal", 700,-300);
             COMPTE david = new COMPTE(123456, "David", 200, -750);
-            COMPTE moris = new COMPTE(123456, "moris", 300, -600);
+            COMPTE doris = new COMPTE(123456, "moris", 300, -600);
 
             david.Transferer(95,pascal);
             david.Crediter(6000);
@@ -32,9 +32,9 @@ namespace COMPTE_BANCAIRE
 
 
             Banque pg = new Banque("Credit Agricole", "Colmar");
-            pg.AjouteCompte(david);
-            pg.AjouteCompte(pascal);
-            pg.AjouteCompte(moris);
+            pg.AjouteCompte(123456,"DAVID",200,-750);
+            pg.AjouteCompte(123456,"pascal",700,-300);
+            pg.AjouteCompte(123456,"Doris",300,-600);
             Console.WriteLine(pg.ToString());
 
             Console.ReadKey();
