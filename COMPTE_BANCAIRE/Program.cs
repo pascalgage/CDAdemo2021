@@ -35,11 +35,14 @@ namespace COMPTE_BANCAIRE
             pg.AjouteCompte(456789,"DAVID",200,-750);
             pg.AjouteCompte(321654,"pascal",700,-300);
             pg.AjouteCompte(159159,"Doris",300,-600);
-            pg.AjouteCompte(978486, "Richard", 702, -300);
+            pg.AjouteCompte(978486,"Richard",702,-300);
             Console.WriteLine(pg.ToString());
 
             Console.WriteLine(pg.CompteSup());
             Console.WriteLine(pg.RendCompte(321654));
+
+            pg.Transferer(456789, 321654, 100);
+            Console.WriteLine(pg.ToString());
 
             Console.ReadKey();
         }

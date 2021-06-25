@@ -84,5 +84,25 @@ namespace ClassLibraryCOMPTE
 
             return lesComptes;
         }
+
+        public bool Transferer(uint _compteEmetteur,uint _compteReceveur, int _montantTransfere)
+        {
+            bool transfertOk;
+            COMPTE emetteur = RendCompte(_compteEmetteur);
+            COMPTE receveur = RendCompte(_compteReceveur);
+
+            if (_montantTransfere < emetteur.SoldeDuCompte - emetteur.DecouvertAutorise)
+            {
+                emetteur.SoldeDuCompte -= _montantTransfere;
+                receveur.SoldeDuCompte += _montantTransfere;
+                transfertOk = true;
+            }
+            else
+            {
+                transfertOk = false;
+            }
+
+            return transfertOk;
+        }
     }
 }

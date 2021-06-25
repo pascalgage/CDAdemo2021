@@ -12,8 +12,10 @@ namespace COMPTE_BANCAIRE
 		private int soldeDuCompte;
 		private int decouvertAutorise;
 
-        public int SoldeDuCompte { get => soldeDuCompte; }
+        public int SoldeDuCompte { get => soldeDuCompte; set => soldeDuCompte = value; }
         public uint NumeroCompte { get => numeroCompte;  }
+        public int DecouvertAutorise { get => decouvertAutorise; }
+        
 
         //Constructeur par défaut de l'objet COMPTE
 
@@ -120,12 +122,7 @@ namespace COMPTE_BANCAIRE
 
 			return estSUpOK;
 		}
-		//Changer le découvert autorisé...
-
-		//public void ChangerAutorisationDuDecouvert(int nouveauDecouvert)
-  //      {
-		//	this.decouvertAutorise = nouveauDecouvert;
-  //      }
+		
 
 		
 
