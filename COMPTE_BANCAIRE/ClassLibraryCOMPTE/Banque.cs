@@ -43,7 +43,7 @@ namespace ClassLibraryCOMPTE
         public COMPTE CompteSup()
         {
             int comptesolde = 0;
-            COMPTE maxiCompte = null;
+            COMPTE maxiCompte=null;
 
             for (int i = 0; i < mesComptes.Count; i++)
             {
@@ -54,6 +54,21 @@ namespace ClassLibraryCOMPTE
                 }
             }
             return maxiCompte;
+        }
+
+        public COMPTE RendCompte(uint _unNumerodeCompte)
+        {
+            COMPTE recherche = null;
+
+            for (int i = 0; i < mesComptes.Count; i++)
+            {
+                if (mesComptes[i].NumeroCompte == _unNumerodeCompte)
+                {
+                    recherche = mesComptes[i];
+                }
+            }
+
+            return recherche;
         }
 
         public override string ToString()

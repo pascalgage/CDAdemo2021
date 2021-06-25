@@ -32,13 +32,14 @@ namespace COMPTE_BANCAIRE
 
 
             Banque pg = new Banque("Credit Agricole", "Colmar");
-            pg.AjouteCompte(123456,"DAVID",200,-750);
-            pg.AjouteCompte(123456,"pascal",700,-300);
-            pg.AjouteCompte(123456,"Doris",300,-600);
-            pg.AjouteCompte(122345, "Richard", 702, -300);
+            pg.AjouteCompte(456789,"DAVID",200,-750);
+            pg.AjouteCompte(321654,"pascal",700,-300);
+            pg.AjouteCompte(159159,"Doris",300,-600);
+            pg.AjouteCompte(978486, "Richard", 702, -300);
             Console.WriteLine(pg.ToString());
 
             Console.WriteLine(pg.CompteSup());
+            Console.WriteLine(pg.RendCompte(321654));
 
             Console.ReadKey();
         }
