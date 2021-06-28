@@ -15,14 +15,14 @@ namespace FRACTION_CLASS
         public int Numerateur { get => numerateur;  }
         public int Denominateur { get => denominateur; }
         
-        //Constructeur hybride...
+        //Constructeur...
         public Fraction(int _numerateur)
+        :this(_numerateur, 1)
         {
-            this.numerateur = _numerateur;
-            this.denominateur = 1;
+            
         }
 
-        //Constructeur à vide...
+        //Constructeur par défaut...
         public Fraction()
         :this(0,1)
         {
@@ -30,32 +30,24 @@ namespace FRACTION_CLASS
         }
 
         //Constructeur par recopie....
-        public Fraction (Fraction a_recopie)
+        public Fraction(Fraction _aRecopie)
+        :this(_aRecopie.numerateur, _aRecopie.denominateur)
         {
-            this.numerateur = a_recopie.numerateur;
-            this.denominateur = a_recopie.denominateur;
+            
         }
 
         //Constructeur classique avec exception...
         public Fraction(int _numerateur, int _denominateur)
         {
-            try
+            if (_denominateur == 0)
             {
-                this.numerateur = _numerateur;
-                this.denominateur = _denominateur;
-
-                double uneFraction = (double)this.numerateur / this.denominateur;
-            }
-            catch (ArithmeticException e)
-            {
-                Console.WriteLine("Nous ne pouvons diviser par zéro" + e.Message);
-            }
-            catch (Exception er)
-            {
-                Console.WriteLine(er.Message);
+                throw new ArgumentOutOfRangeException("Le dénominateur ne peut pas être zéro");
             }
 
+            this.numerateur = _numerateur;
+            this.denominateur = _denominateur;
 
+            
         }
 
         //Méthode d'affichage finale de Fraction...

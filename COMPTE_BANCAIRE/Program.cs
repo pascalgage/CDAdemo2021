@@ -27,7 +27,7 @@ namespace COMPTE_BANCAIRE
             {
                 Console.WriteLine("Opération impossible !");
             }
-            if (bnp.Transferer(978486, 123456, 2000))
+            if (bnp.Transferer(978486, 123455, 2000))
             {
                 Console.WriteLine("Opération effectuée !");
             }
@@ -35,7 +35,7 @@ namespace COMPTE_BANCAIRE
             {
                 Console.WriteLine("Opération impossible !");
             }
-
+            
             Console.WriteLine(bnp);
             Console.WriteLine(bnp.CompteSup());
             Console.ReadKey();

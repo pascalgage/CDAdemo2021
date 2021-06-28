@@ -67,8 +67,9 @@ namespace ClassLibraryCOMPTE
                 {
                     recherche = mesComptes[i];
                 }
+                
             }
-
+            
             return recherche;
         }
 
@@ -101,6 +102,7 @@ namespace ClassLibraryCOMPTE
             }
             else
             {
+
                 transfertOk = false;
             }
 
