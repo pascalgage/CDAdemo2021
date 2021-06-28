@@ -72,10 +72,10 @@ namespace FRACTION_CLASS
             Console.WriteLine("");
 
             Console.WriteLine("VALEUR NUMERIQUE de : " + a + " / " + b);
-            Console.WriteLine(c.Evalue(a,b));
+            Console.WriteLine(c.Evalue());
 
             Console.WriteLine("VALEUR NUMERIQUE de : " + d + " / " + e);
-            Console.WriteLine(f.Evalue(d,e));
+            Console.WriteLine(f.Evalue());
             
             Console.ReadKey();
         }

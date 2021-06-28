@@ -24,9 +24,9 @@ namespace FRACTION_CLASS
 
         //Constructeur à vide...
         public Fraction()
+        :this(0,1)
         {
-            this.numerateur = 0;
-            this.denominateur = 1;
+            
         }
 
         //Constructeur par recopie....
@@ -73,12 +73,12 @@ namespace FRACTION_CLASS
         }
 
         //Méthode qui permet d'obtenir le résultat numérique de Fraction...
-        public decimal Evalue(decimal n, decimal d)
+        public decimal Evalue()
         {
-            decimal resultN;
-            resultN = n / d;
-            resultN = (Math.Round(resultN, 4));
-            return resultN;
+            decimal result;
+            result = Convert.ToDecimal(this.numerateur) / Convert.ToDecimal( this.denominateur);
+            result = (Math.Round(result, 4));
+            return result;
         }
 
         //Méthode de comparaison de deux fractions...
@@ -86,7 +86,7 @@ namespace FRACTION_CLASS
         {
             bool estSup=false;
 
-            if(this.Evalue(this.numerateur, this.denominateur) > _autreFraction.Evalue(_autreFraction.numerateur, _autreFraction.denominateur))
+            if(this.Evalue() > _autreFraction.Evalue())
             {
                 estSup = true;
             }
@@ -101,7 +101,7 @@ namespace FRACTION_CLASS
         public bool EgalA(Fraction _autreFraction)
         {
             bool estEgalA = false;
-            if (this.Evalue(this.numerateur, this.denominateur) == _autreFraction.Evalue(_autreFraction.numerateur, _autreFraction.denominateur))
+            if (this.Evalue() == _autreFraction.Evalue())
             {
                 estEgalA = true;
             }
@@ -117,7 +117,7 @@ namespace FRACTION_CLASS
         {
             bool estInf = false;
 
-            if (this.Evalue(this.numerateur, this.denominateur) < _autreFraction.Evalue(_autreFraction.numerateur, _autreFraction.denominateur))
+            if (this.Evalue() < _autreFraction.Evalue())
             {
                 estInf = true;
             }
@@ -138,7 +138,7 @@ namespace FRACTION_CLASS
             int numerateur = this.numerateur;
             int denominateur = this.denominateur;
 
-            
+           
             if (numerateur < 0)
             {
                 numerateur = -numerateur;
@@ -169,13 +169,7 @@ namespace FRACTION_CLASS
         //Méthode de réduction de fraction...
         public void Reduire()
         {
-            
-          if (denominateur < 0)
-           {
-             numerateur = -numerateur;
-             denominateur = -denominateur;
-           }
-
+            this.GestionSigne();
             int pgcd = this.GetPgcd();
             numerateur = numerateur / pgcd;
             denominateur = denominateur / pgcd;
@@ -184,13 +178,12 @@ namespace FRACTION_CLASS
         //Méthode de gestion du signe de la fraction...
         public void GestionSigne()
         {
-            
             if (denominateur < 0)
             {
                 numerateur = -numerateur;
                 denominateur = -denominateur;
             }
-            
+
         }
 
         //Méthode qui vise à inverser une fraction...réutilisée dans méthode Divise()...

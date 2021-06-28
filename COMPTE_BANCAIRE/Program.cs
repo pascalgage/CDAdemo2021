@@ -19,7 +19,15 @@ namespace COMPTE_BANCAIRE
             bnp.AjouteCompte(123456, "Doris", 2500, -250);
             Console.WriteLine(bnp);
 
-            if(bnp.Transferer(978486, 123456, 10095))
+            if(bnp.Transferer(978486, 123456, 5000))
+            {
+                Console.WriteLine("Opération effectuée !");
+            }
+            else
+            {
+                Console.WriteLine("Opération impossible !");
+            }
+            if (bnp.Transferer(978486, 123456, 2000))
             {
                 Console.WriteLine("Opération effectuée !");
             }
@@ -29,6 +37,7 @@ namespace COMPTE_BANCAIRE
             }
 
             Console.WriteLine(bnp);
+            Console.WriteLine(bnp.CompteSup());
             Console.ReadKey();
         }
     }

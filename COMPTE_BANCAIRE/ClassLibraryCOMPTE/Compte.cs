@@ -12,7 +12,7 @@ namespace COMPTE_BANCAIRE
 		private int soldeDuCompte;
 		private int decouvertAutorise;
 
-        public int SoldeDuCompte { get => soldeDuCompte; set => soldeDuCompte = value; }
+        public int SoldeDuCompte { get => soldeDuCompte; }
         public uint NumeroCompte { get => numeroCompte;  }
         public int DecouvertAutorise { get => decouvertAutorise; }
         

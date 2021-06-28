@@ -40,6 +40,7 @@ namespace ClassLibraryCOMPTE
             AjouteCompte(nouveauCompte);
         }
 
+        //méthode à refaire d'urgence avec AunSoldeSuperieur de compte.cs!
         public COMPTE CompteSup()
         {
             int comptesolde = 0;
@@ -91,10 +92,11 @@ namespace ClassLibraryCOMPTE
             COMPTE emetteur = RendCompte(_compteEmetteur);
             COMPTE receveur = RendCompte(_compteReceveur);
 
-            if (_montantTransfere < emetteur.SoldeDuCompte - emetteur.DecouvertAutorise)
+            if (emetteur.Debiter(_montantTransfere)==true)
             {
-                emetteur.SoldeDuCompte -= _montantTransfere;
-                receveur.SoldeDuCompte += _montantTransfere;
+                
+                emetteur.Transferer(_montantTransfere,emetteur);
+                receveur.Crediter(_montantTransfere);
                 transfertOk = true;
             }
             else
