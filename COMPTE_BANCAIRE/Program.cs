@@ -35,9 +35,10 @@ namespace COMPTE_BANCAIRE
             {
                 Console.WriteLine("Opération impossible !");
             }
-            
+            bnp.Transferer(123456, 978486, 5000);
             Console.WriteLine(bnp);
             Console.WriteLine(bnp.CompteSup());
+
             Console.ReadKey();
         }
     }

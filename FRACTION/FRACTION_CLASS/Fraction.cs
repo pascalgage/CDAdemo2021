@@ -11,6 +11,7 @@ namespace FRACTION_CLASS
         //Attributs....
         private int numerateur;
         private int denominateur;
+        
 
         public int Numerateur { get => numerateur;  }
         public int Denominateur { get => denominateur; }
@@ -22,7 +23,7 @@ namespace FRACTION_CLASS
             
         }
 
-        //Constructeur par défaut...
+        //Constructeur par défaut...(interdépendant)
         public Fraction()
         :this(0,1)
         {

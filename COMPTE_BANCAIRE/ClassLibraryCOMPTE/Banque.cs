@@ -43,33 +43,50 @@ namespace ClassLibraryCOMPTE
         //méthode à refaire d'urgence avec AunSoldeSuperieur de compte.cs!
         public COMPTE CompteSup()
         {
-            int comptesolde = 0;
-            COMPTE maxiCompte=null;
+            bool recherche = false;
+            int solde = 0;
+            COMPTE maxiCompte = null;
+            int compteur = 0;
 
-            for (int i = 0; i < mesComptes.Count; i++)
+            while (recherche==false && compteur<mesComptes.Count )
             {
-                if(mesComptes[i].SoldeDuCompte > comptesolde)
+                if (mesComptes[compteur].SoldeDuCompte > solde)
                 {
-                    comptesolde = mesComptes[i].SoldeDuCompte;
-                    maxiCompte = mesComptes[i];
+                    solde = mesComptes[compteur].SoldeDuCompte;
+                    recherche = false;
+                }
+                else
+                {
+                    maxiCompte = mesComptes[compteur];
+                    compteur++;
+                    recherche = true;
                 }
             }
             return maxiCompte;
-        }
 
+
+        }
+        
         public COMPTE RendCompte(uint _unNumerodeCompte)
         {
-            COMPTE recherche = null;
+            COMPTE recherche = new COMPTE();
 
-            for (int i = 0; i < mesComptes.Count; i++)
+            bool trouveOk=false;
+            int icount = 0;
+            while (trouveOk==false && icount<mesComptes.Count)
             {
-                if (mesComptes[i].NumeroCompte == _unNumerodeCompte)
+                if (mesComptes[icount].NumeroCompte == _unNumerodeCompte)
                 {
-                    recherche = mesComptes[i];
+                    trouveOk = true;
+                    recherche = mesComptes[icount];
                 }
-                
+                else
+                {
+                    trouveOk = false;
+                    icount++;
+                    
+                }
             }
-            
             return recherche;
         }
 
@@ -93,12 +110,11 @@ namespace ClassLibraryCOMPTE
             COMPTE emetteur = RendCompte(_compteEmetteur);
             COMPTE receveur = RendCompte(_compteReceveur);
 
-            if (emetteur.Debiter(_montantTransfere)==true)
+            if (emetteur!=null && receveur!=null)
             {
                 
-                emetteur.Transferer(_montantTransfere,emetteur);
-                receveur.Crediter(_montantTransfere);
-                transfertOk = true;
+                transfertOk =emetteur.Transferer(_montantTransfere,receveur);
+                
             }
             else
             {
