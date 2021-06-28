@@ -7,7 +7,7 @@ namespace Test_FRaction
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethodESTsuperieureA()
+        public void TestMethodESTsuperieureA_ISTrue()
         {
             Fraction f = new Fraction(18, 6);
             Fraction g = new Fraction(24, 12);
@@ -29,6 +29,35 @@ namespace Test_FRaction
 
 
         }
+
+        [TestMethod]
+        public void TestMethodESTinferieureA_IsTrue()
+        {
+            Fraction f = new Fraction(1,3);
+            Fraction g = new Fraction(2,4);
+
+            f.EstInferieurA(g);
+            Assert.IsTrue(f.EstInferieurA(g), "true");
+
+
+        }
+
+        [TestMethod]
+        public void TestMethodESTinferieureA_IsFalse()
+        {
+            Fraction f = new Fraction(1,3);
+            Fraction g = new Fraction(2,4);
+
+            g.EstInferieurA(f);
+            Assert.IsFalse(g.EstInferieurA(f), "false");
+
+
+        }
+
+
+
+
+
 
         [TestMethod]
         public void TestMethodPLUS()
