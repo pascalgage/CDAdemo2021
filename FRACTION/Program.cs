@@ -16,6 +16,7 @@ namespace FRACTION_CLASS
             int d;
             int e;
 
+            
             Console.WriteLine("Entrez le numérateur de la fraction 1");
             a = int.Parse(Console.ReadLine());
             Console.WriteLine("Entrez le dénominateur de la fraction 1");
@@ -24,9 +25,9 @@ namespace FRACTION_CLASS
             d = int.Parse(Console.ReadLine());
             Console.WriteLine("Entrez le dénominateur de la fraction 2");
             e = int.Parse(Console.ReadLine());
-
+            
             Console.Clear();
-
+            
             Fraction c = new Fraction(a, b);
             Fraction f = new Fraction(d, e);
 
@@ -76,8 +77,6 @@ namespace FRACTION_CLASS
             Console.WriteLine("VALEUR NUMERIQUE de : " + d + " / " + e);
             Console.WriteLine(f.Evalue(d,e));
             
-            
-
             Console.ReadKey();
         }
     }
