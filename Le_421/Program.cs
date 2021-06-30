@@ -15,6 +15,12 @@ namespace Le_421
             Console.WriteLine(monDe.ToString());
             monDe.SeJeter();
             Console.WriteLine(monDe.ToString());
+            monDe.SeJeter();
+            Console.WriteLine(monDe.ToString());
+
+            Manche départ = new Manche();
+            départ.LancerLes3Des();
+            Console.WriteLine(départ.ToString());
 
             Console.ReadKey();
         }

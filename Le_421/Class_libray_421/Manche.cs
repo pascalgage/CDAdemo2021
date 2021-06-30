@@ -11,24 +11,33 @@ namespace Class_libray_421
         private const int NB_LANCER_MAX = 3;
         private int nbLancerCourant;
 
+        public List<De> Mes3Des { get => mes3Des;}
+        public int NbLancerCourant { get => nbLancerCourant; }
+
         public Manche()
         {
-            throw new System.NotImplementedException();
+            this.mes3Des = new List<De> { new De(), new De(), new De() };
+            this.nbLancerCourant = 1;
         }
+
 
         public void LancerLes3Des()
         {
-            throw new System.NotImplementedException();
+            mes3Des[0].SeJeter();
+            mes3Des[1].SeJeter();
+            mes3Des[2].SeJeter();
+            nbLancerCourant++;
         }
 
         public void Lancer(int numeroDe1, int numeroDe2)
         {
-            throw new System.NotImplementedException();
+            mes3Des[numeroDe1].SeJeter();
+            mes3Des[numeroDe2].SeJeter();
         }
 
         public void Lancer(int numeroDe)
         {
-            throw new System.NotImplementedException();
+            mes3Des[numeroDe].SeJeter();
         }
 
         public bool AEncoreUnLance()
@@ -43,7 +52,7 @@ namespace Class_libray_421
 
         public override string ToString()
         {
-            throw new System.NotImplementedException();
+            return "La valeur dé 1 est: " + mes3Des[0] + " La valeur dé 2 est: " + mes3Des[1] + " La valeur dé 3 est: " + mes3Des[2];
         }
 
         public string RenvoieUneRepresentationDesDes()
