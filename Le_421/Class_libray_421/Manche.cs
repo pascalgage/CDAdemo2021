@@ -61,7 +61,7 @@ namespace Class_libray_421
         public bool AGagneLaManche()
         {
             bool gagneManche = false;
-            if(mes3Des[0].Valeur==1 && mes3Des[1].Valeur==2 && mes3Des[2].Valeur == 4)
+            if(mes3Des[0].Valeur==4 && mes3Des[1].Valeur==2 && mes3Des[2].Valeur == 1)
             {
                 gagneManche = true;
             }

@@ -13,8 +13,15 @@ namespace Le_421
         {
             
             Manche depart = new Manche();
-            depart.LancerLes3Des();
-            Console.WriteLine(depart.ToString());
+            
+            
+            Console.WriteLine(depart.RenvoieUneRepresentationDesDes());
+            int numDe = 0;
+            Console.WriteLine("Quel dé à relancer ?");
+            numDe = int.Parse(Console.ReadLine());
+
+            depart.Lancer(numDe);
+
             Console.WriteLine(depart.RenvoieUneRepresentationDesDes());
 
             if (depart.AGagneLaManche() == true)
