@@ -13,6 +13,8 @@ namespace Le_421
         {
             De monDe = new De();
             Console.WriteLine(monDe.ToString());
+            monDe.SeJeter();
+            Console.WriteLine(monDe.ToString());
 
             Console.ReadKey();
         }
