@@ -12,9 +12,15 @@ namespace Le_421
         static void Main(string[] args)
         {
             
-            Manche départ = new Manche();
-            départ.LancerLes3Des();
-            Console.WriteLine(départ.ToString());
+            Manche depart = new Manche();
+            depart.LancerLes3Des();
+            Console.WriteLine(depart.ToString());
+            Console.WriteLine(depart.RenvoieUneRepresentationDesDes());
+
+            if (depart.AGagneLaManche() == true)
+            {
+                Console.WriteLine("Chapeau Bas ! BRavo c'est421 !!!");
+            }
 
             Console.ReadKey();
         }

@@ -27,12 +27,15 @@ namespace Class_libray_421
             mes3Des[1].SeJeter();
             mes3Des[2].SeJeter();
             nbLancerCourant++;
+            TrierLesDes();
         }
 
         public void Lancer(int numeroDe1, int numeroDe2)
         {
             mes3Des[numeroDe1].SeJeter();
             mes3Des[numeroDe2].SeJeter();
+
+            TrierLesDes();
         }
 
         public void Lancer(int numeroDe)
@@ -42,27 +45,55 @@ namespace Class_libray_421
 
         public bool AEncoreUnLance()
         {
-            throw new System.NotImplementedException();
+            bool encore=false;
+
+            if (nbLancerCourant < NB_LANCER_MAX)
+            {
+                encore = true;
+            }
+            else
+            {
+                encore = false;
+            }
+            return encore;
         }
 
         public bool AGagneLaManche()
         {
-            throw new System.NotImplementedException();
+            bool gagneManche = false;
+            if(mes3Des[0].Valeur==1 && mes3Des[1].Valeur==2 && mes3Des[2].Valeur == 4)
+            {
+                gagneManche = true;
+            }
+            else
+            {
+                gagneManche = false;
+            }
+            return gagneManche;
         }
 
         public override string ToString()
         {
-            return "La valeur dé 1 est: " + mes3Des[0] + " La valeur dé 2 est: " + mes3Des[1] + " La valeur dé 3 est: " + mes3Des[2];
+            return "La valeur dé n°1 est: " + mes3Des[0] + " La valeur dé n°2 est: " + mes3Des[1] + " La valeur dé n°3 est: " + mes3Des[2];
         }
 
         public string RenvoieUneRepresentationDesDes()
         {
-            throw new System.NotImplementedException();
+            string lesDes = "";
+
+            for (int i = 0; i < mes3Des.Count; i++)
+            {
+                lesDes += " Le Dé n°"+(i+1)+"="+  mes3Des[i];
+            }
+
+            return lesDes;
         }
 
         private void TrierLesDes()
         {
-            throw new System.NotImplementedException();
+            mes3Des.Sort();
+            mes3Des.Reverse();
+
         }
     }
 }

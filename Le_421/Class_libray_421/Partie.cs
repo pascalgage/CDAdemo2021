@@ -12,6 +12,12 @@ namespace Class_libray_421
         private int nombreDaMancheJoue;
         private int nbMancheAJouer;
 
+
+        public Partie()
+        {
+            this.maMancheCourante = new Manche();
+        }
+
         public void LancerLes3Des()
         {
             this.maMancheCourante.LancerLes3Des();
