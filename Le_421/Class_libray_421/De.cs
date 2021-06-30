@@ -39,7 +39,7 @@ namespace Class_libray_421
 
         public override string ToString()
         {
-            return "La valeur: "+valeur;
+            return " "+valeur;
         }
     }
 }
