@@ -8,16 +8,17 @@ namespace Class_libray_421
     public class Manche
     {
         private List<De> mes3Des;
-        private const int NB_LANCER_MAX = 3;
+        private const int NB_LANCER_MAX = 20;
         private int nbLancerCourant;
 
         public List<De> Mes3Des { get => mes3Des;}
         public int NbLancerCourant { get => nbLancerCourant; }
+        
 
         public Manche()
         {
             this.mes3Des = new List<De> { new De(), new De(), new De() };
-            this.nbLancerCourant = 1;
+            this.nbLancerCourant = 0;
         }
 
 
@@ -34,13 +35,15 @@ namespace Class_libray_421
         {
             mes3Des[numeroDe1].SeJeter();
             mes3Des[numeroDe2].SeJeter();
-
+            nbLancerCourant++;
             TrierLesDes();
         }
 
         public void Lancer(int numeroDe)
         {
             mes3Des[numeroDe].SeJeter();
+            nbLancerCourant++;
+            TrierLesDes();
         }
 
         public bool AEncoreUnLance()
@@ -60,10 +63,13 @@ namespace Class_libray_421
 
         public bool AGagneLaManche()
         {
+            
             bool gagneManche = false;
-            if(mes3Des[0].Valeur==4 && mes3Des[1].Valeur==2 && mes3Des[2].Valeur == 1)
+            
+            if (mes3Des[0].Valeur==4 && mes3Des[1].Valeur==2 && mes3Des[2].Valeur == 1)
             {
                 gagneManche = true;
+                
             }
             else
             {

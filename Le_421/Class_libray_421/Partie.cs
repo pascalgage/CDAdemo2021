@@ -9,7 +9,7 @@ namespace Class_libray_421
     {
         private Manche maMancheCourante;
         private int scoreCourant;
-        private int nombreDaMancheJoue;
+        private int nombreDeMancheJoue;
         private int nbMancheAJouer;
 
 
@@ -23,14 +23,14 @@ namespace Class_libray_421
             this.maMancheCourante.LancerLes3Des();
         }
 
-        public void EstGagne()
+        public void EstGagnee()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void AEncoreUneMancheAJouer()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }
