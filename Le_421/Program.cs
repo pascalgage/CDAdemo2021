@@ -11,8 +11,8 @@ namespace Le_421
     {
         static void Main(string[] args)
         {
-            int numDe = 0;
-            int combiendeDé = 0;
+            int numDe;
+            int combiendeDé;
             
             Manche depart = new Manche();
             depart.LancerLes3Des();
