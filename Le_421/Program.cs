@@ -11,9 +11,12 @@ namespace Le_421
     {
         static void Main(string[] args)
         {
+
+
+            //Déroulement de la manche....
             int numDe;
             int combiendeDé;
-            
+
             Manche depart = new Manche();
             depart.LancerLes3Des();
             if (depart.AGagneLaManche() == true)
@@ -21,11 +24,11 @@ namespace Le_421
                 Console.WriteLine("YESSSS ! DU PREMIER COUP 421 !!!");
             }
 
-            do
-            {
+        do
+        {
 
-            
-            Console.WriteLine(depart.RenvoieUneRepresentationDesDes());
+
+                Console.WriteLine(depart.RenvoieUneRepresentationDesDes());
 
 
                 if (depart.AEncoreUnLance() == true)
@@ -35,7 +38,8 @@ namespace Le_421
                     if (combiendeDé == 3)
                     {
                         depart.LancerLes3Des();
-                    }else if (combiendeDé == 2)
+                    }
+                    else if (combiendeDé == 2)
                     {
                         Console.WriteLine("Quel dé à relancer ?");
                         numDe = int.Parse(Console.ReadLine());
@@ -51,7 +55,7 @@ namespace Le_421
 
                         depart.Lancer(numDe);
                     }
-                    
+
                 }
                 else
                 {
@@ -59,17 +63,18 @@ namespace Le_421
                     break;
 
                 }
-           
-            
-            if (depart.AGagneLaManche() == true)
-            {
-                Console.WriteLine("Chapeau Bas ! BRavo c'est421 !!!");
-               
-            }
 
-            } while(depart.NbLancerCourant<=10);
+
+                if (depart.AGagneLaManche() == true)
+                {
+                    Console.WriteLine("Chapeau Bas ! BRavo c'est421 !!!");
+                    Console.WriteLine(depart.RenvoieUneRepresentationDesDes());
+
+                }
+
+        } while (depart.AGagneLaManche()==false);
 
             Console.ReadKey();
-        }
+        }       
     }
 }

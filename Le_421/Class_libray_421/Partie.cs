@@ -12,6 +12,7 @@ namespace Class_libray_421
         private int nombreDeMancheJoue;
         private int nbMancheAJouer;
 
+        public int ScoreCourant { get => scoreCourant; }
 
         public Partie(int _nbMancheAJouer)
         {
@@ -21,6 +22,10 @@ namespace Class_libray_421
             this.nbMancheAJouer = _nbMancheAJouer;
         }
 
+        /* 
+         * Que se passe t'il quand je gagne une manche 
+         * Que se passe t'il quand il me reste des manches à jouer
+         */
         public void LancerLes3Des()
         {
             this.maMancheCourante.LancerLes3Des();
@@ -37,25 +42,31 @@ namespace Class_libray_421
             this.maMancheCourante.Lancer(_numde);
         }
 
-        public bool EstGagnee()
+        public bool PartieEstGagnee()
         {
-            bool estGagne = false;
-            if(scoreCourant>0 && nombreDeMancheJoue == nbMancheAJouer)
-            {
-                estGagne = true;
-            }
-            return estGagne;
+            return scoreCourant > 0 && nbMancheAJouer == 0;
         }
         
 
         public bool AEncoreUneMancheAJouer()
         {
-            bool encoreManche=false;
-            if (nbMancheAJouer > 0)
-            {
-                encoreManche = true;
-            }
-            return encoreManche;
+            return nbMancheAJouer > 0 && scoreCourant > 0;
+        }
+
+        public string RenvoieUneRepresentationDesDes()
+        {
+            return this.maMancheCourante.RenvoieUneRepresentationDesDes();
+        }
+
+        public bool AGagneLaManche()
+        {
+            return this.maMancheCourante.AGagneLaManche();
+           
+        }
+
+        public bool AEncoreUnLance()
+        {
+            return this.maMancheCourante.AEncoreUnLance();
         }
     }
 }
