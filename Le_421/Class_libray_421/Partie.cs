@@ -33,7 +33,7 @@ namespace Class_libray_421
             if (this.maMancheCourante.AGagneLaManche() == true)
             {
                 this.scoreCourant += 30;
-                nombreDeMancheJoue++;
+                
                 
             }
         }

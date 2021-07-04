@@ -90,9 +90,9 @@ namespace Le_421
                 {
                     Console.WriteLine("Partie Terminée, au revoir !");
                 }
-                else 
+                else if (mapartie.ScoreCourant >0 && mapartie.NombreDeMancheJoue==nbrmanche)
                 {
-                    
+                    Console.WriteLine("Bravo PARTIE GAGNEE !!!");
                     Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
                 }
                 if (mapartie.PartieEstGagnee() == true)
