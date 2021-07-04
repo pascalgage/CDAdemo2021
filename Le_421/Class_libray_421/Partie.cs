@@ -24,10 +24,6 @@ namespace Class_libray_421
             this.nbMancheAJouer = _nbMancheAJouer;
         }
 
-        /* 
-         * Que se passe t'il quand je gagne une manche 
-         * Que se passe t'il quand il me reste des manches à jouer
-         */
         public void MancheOK()
         {
             if (this.maMancheCourante.AGagneLaManche() == true)
