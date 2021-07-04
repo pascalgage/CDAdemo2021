@@ -12,7 +12,9 @@ namespace Class_libray_421
         private int nombreDeMancheJoue;
         private int nbMancheAJouer;
 
-        public int ScoreCourant { get => scoreCourant; }
+        public int ScoreCourant { get => scoreCourant; set => scoreCourant = value; }
+        public int NombreDeMancheJoue { get => nombreDeMancheJoue; }
+        public int NbMancheAJouer { get => nbMancheAJouer; }
 
         public Partie(int _nbMancheAJouer)
         {
@@ -26,6 +28,30 @@ namespace Class_libray_421
          * Que se passe t'il quand je gagne une manche 
          * Que se passe t'il quand il me reste des manches à jouer
          */
+        public void MancheOK()
+        {
+            if (this.maMancheCourante.AGagneLaManche() == true)
+            {
+                this.scoreCourant += 30;
+                nombreDeMancheJoue++;
+                
+            }
+        }
+        public void MancheJoueePerdue()
+        {
+            if (this.maMancheCourante.AGagneLaManche() == false)
+            {
+                this.scoreCourant -= 10;
+                nombreDeMancheJoue++;
+
+            }
+
+        }
+        public void Reinitialisation()
+        {
+            this.maMancheCourante.Reinitialisation();
+        }
+
         public void LancerLes3Des()
         {
             this.maMancheCourante.LancerLes3Des();

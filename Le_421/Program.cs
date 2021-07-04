@@ -11,69 +11,86 @@ namespace Le_421
     {
         static void Main(string[] args)
         {
+            int nbrmanche;
+            Console.WriteLine("Combien de manches dans votre Partie 421 ?");
+            nbrmanche = int.Parse(Console.ReadLine());
+            Partie mapartie = new Partie(nbrmanche);
 
+            mapartie.LancerLes3Des();
+            Console.WriteLine(mapartie.RenvoieUneRepresentationDesDes());
+            Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
 
-            //Déroulement de la manche....
-            int numDe;
-            int combiendeDé;
-
-            Manche depart = new Manche();
-            depart.LancerLes3Des();
-            if (depart.AGagneLaManche() == true)
+            if (mapartie.AGagneLaManche() == true)
             {
-                Console.WriteLine("YESSSS ! DU PREMIER COUP 421 !!!");
+                Console.WriteLine("BRAVO du PREMIER COUP !");
+                mapartie.MancheOK();
+                Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
+
             }
 
-        do
-        {
+            for (int i = 0; i < nbrmanche; i++)
+            {
+                Console.WriteLine("MANCHE" + (i + 1));
+                mapartie.LancerLes3Des();
+                Console.WriteLine(mapartie.RenvoieUneRepresentationDesDes());
+
+                while (mapartie.AEncoreUnLance() == true)
+            {
+                int numDe;
+                int combiendeDé;
+                Console.WriteLine("Combien de dés souhaitez-vous relancer ?");
+                combiendeDé = int.Parse(Console.ReadLine());
+                
 
 
-                Console.WriteLine(depart.RenvoieUneRepresentationDesDes());
-
-
-                if (depart.AEncoreUnLance() == true)
-                {
-                    Console.WriteLine("combiendeDé de dés voulez-vous relancer ?");
-                    combiendeDé = int.Parse(Console.ReadLine());
                     if (combiendeDé == 3)
                     {
-                        depart.LancerLes3Des();
+                        mapartie.LancerLes3Des();
                     }
                     else if (combiendeDé == 2)
                     {
                         Console.WriteLine("Quel dé à relancer ?");
                         numDe = int.Parse(Console.ReadLine());
-                        depart.Lancer(numDe);
+                        mapartie.Lancer(numDe - 1);
                         Console.WriteLine("Quel dé à relancer ?");
                         numDe = int.Parse(Console.ReadLine());
-                        depart.Lancer(numDe);
+                        mapartie.Lancer(numDe - 1);
                     }
-                    else
+                    else if (combiendeDé == 1)
                     {
                         Console.WriteLine("Quel dé à relancer ?");
                         numDe = int.Parse(Console.ReadLine());
 
-                        depart.Lancer(numDe);
+                        mapartie.Lancer(numDe - 1);
                     }
+                    else
+                    {
+                        Console.WriteLine("Erreur de saisie !!!");
+                    }
+                    Console.WriteLine(mapartie.RenvoieUneRepresentationDesDes());
+
+
+                    if (mapartie.AGagneLaManche() == true)
+                    {
+                        Console.WriteLine("Chapeau Bas ! BRavo c'est421 !!!");
+                        mapartie.MancheOK();
+                        mapartie.LancerLes3Des();
+                        Console.WriteLine(mapartie.RenvoieUneRepresentationDesDes());
+                        Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
+                        mapartie.Reinitialisation();
+                    }
+                    
 
                 }
-                else
+                mapartie.MancheJoueePerdue();
+                Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
+                mapartie.Reinitialisation();
+
+                if (mapartie.ScoreCourant == 0)
                 {
-                    Console.WriteLine("Manche boulée !");
-                    break;
-
+                    Console.WriteLine("Partie Terminée, au revoir !");
                 }
-
-
-                if (depart.AGagneLaManche() == true)
-                {
-                    Console.WriteLine("Chapeau Bas ! BRavo c'est421 !!!");
-                    Console.WriteLine(depart.RenvoieUneRepresentationDesDes());
-
-                }
-
-        } while (depart.AGagneLaManche()==false);
-
+            }
             Console.ReadKey();
         }       
     }

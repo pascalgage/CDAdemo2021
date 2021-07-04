@@ -8,12 +8,12 @@ namespace Class_libray_421
     public class Manche
     {
         private List<De> mes3Des;
-        private const int NB_LANCER_MAX = 10;
+        private const int NB_LANCER_MAX = 4;
         private int nbLancerCourant;
 
-        public List<De> Mes3Des { get => mes3Des;}
-        public int NbLancerCourant { get => nbLancerCourant; }
+       
         
+        public int NbLancerCourant { get => nbLancerCourant; set => nbLancerCourant = value; }
 
         public Manche()
         {
@@ -45,12 +45,15 @@ namespace Class_libray_421
             nbLancerCourant++;
             TrierLesDes();
         }
-
+        public void Reinitialisation()
+        {
+            nbLancerCourant = 0;
+        }
         public bool AEncoreUnLance()
         {
             bool encore=false;
 
-            if (nbLancerCourant < NB_LANCER_MAX)
+            if (nbLancerCourant <= NB_LANCER_MAX)
             {
                 encore = true;
             }
