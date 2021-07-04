@@ -18,6 +18,7 @@ namespace Class_libray_421
         public Manche()
         {
             this.mes3Des = new List<De> { new De(), new De(), new De() };
+            this.TrierLesDes();
             this.nbLancerCourant = 0;
         }
 

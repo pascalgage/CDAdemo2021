@@ -15,23 +15,22 @@ namespace Le_421
             Console.WriteLine("Combien de manches dans votre Partie 421 ?");
             nbrmanche = int.Parse(Console.ReadLine());
             Partie mapartie = new Partie(nbrmanche);
-
-            mapartie.LancerLes3Des();
-            Console.WriteLine(mapartie.RenvoieUneRepresentationDesDes());
+            
             Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
 
-            if (mapartie.AGagneLaManche() == true)
-            {
-                Console.WriteLine("BRAVO du PREMIER COUP !");
-                mapartie.MancheOK();
-                Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
-
-            }
+            
 
             for (int i = 0; i < nbrmanche; i++)
             {
                 Console.WriteLine("MANCHE " + (i + 1));
-                
+                mapartie.LancerLes3Des();
+                if (mapartie.AGagneLaManche() == true)
+                {
+                    Console.WriteLine("BRAVO du PREMIER COUP !");
+                    mapartie.MancheOK();
+                    Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
+
+                }
                 Console.WriteLine(mapartie.RenvoieUneRepresentationDesDes());
 
                 while (mapartie.AEncoreUnLance() == true)
