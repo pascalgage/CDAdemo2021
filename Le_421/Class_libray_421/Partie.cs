@@ -12,7 +12,7 @@ namespace Class_libray_421
         private int nombreDeMancheJoue;
         private int nbMancheAJouer;
 
-        public int ScoreCourant { get => scoreCourant; set => scoreCourant = value; }
+        public int ScoreCourant { get => scoreCourant; }
         public int NombreDeMancheJoue { get => nombreDeMancheJoue; }
         public int NbMancheAJouer { get => nbMancheAJouer; }
 

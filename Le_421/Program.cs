@@ -77,7 +77,7 @@ namespace Le_421
                         mapartie.LancerLes3Des();
                         Console.WriteLine(mapartie.RenvoieUneRepresentationDesDes());
                         Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
-                        mapartie.Reinitialisation();
+                       
                     }
                     
 
@@ -89,6 +89,15 @@ namespace Le_421
                 if (mapartie.ScoreCourant == 0)
                 {
                     Console.WriteLine("Partie Terminée, au revoir !");
+                }
+                else 
+                {
+                    
+                    Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
+                }
+                if (mapartie.PartieEstGagnee() == true)
+                {
+                    Console.WriteLine("Bravo PARTIE GAGNEE !!!");
                 }
             }
             Console.ReadKey();

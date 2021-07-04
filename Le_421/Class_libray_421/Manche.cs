@@ -8,12 +8,12 @@ namespace Class_libray_421
     public class Manche
     {
         private List<De> mes3Des;
-        private const int NB_LANCER_MAX = 4;
+        private const int NB_LANCER_MAX = 3;
         private int nbLancerCourant;
 
        
         
-        public int NbLancerCourant { get => nbLancerCourant; set => nbLancerCourant = value; }
+        public int NbLancerCourant { get => nbLancerCourant; }
 
         public Manche()
         {
