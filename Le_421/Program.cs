@@ -36,6 +36,7 @@ namespace Le_421
                 while (mapartie.AEncoreUnLance() == true)
             {
                 int numDe;
+                int numdebis;
                 int combiendeDé;
                 Console.WriteLine("Combien de dés souhaitez-vous relancer ?");
                 combiendeDé = int.Parse(Console.ReadLine());
@@ -50,10 +51,10 @@ namespace Le_421
                     {
                         Console.WriteLine("Quel dé à relancer ?");
                         numDe = int.Parse(Console.ReadLine());
-                        mapartie.Lancer(numDe - 1);
+                        
                         Console.WriteLine("Quel dé à relancer ?");
-                        numDe = int.Parse(Console.ReadLine());
-                        mapartie.Lancer(numDe - 1);
+                        numdebis = int.Parse(Console.ReadLine());
+                        mapartie.Lancer(numDe - 1,numdebis-1);
                     }
                     else if (combiendeDé == 1)
                     {
