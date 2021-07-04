@@ -30,8 +30,8 @@ namespace Le_421
 
             for (int i = 0; i < nbrmanche; i++)
             {
-                Console.WriteLine("MANCHE" + (i + 1));
-                mapartie.LancerLes3Des();
+                Console.WriteLine("MANCHE " + (i + 1));
+                
                 Console.WriteLine(mapartie.RenvoieUneRepresentationDesDes());
 
                 while (mapartie.AEncoreUnLance() == true)

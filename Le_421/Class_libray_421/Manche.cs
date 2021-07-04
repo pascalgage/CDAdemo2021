@@ -92,7 +92,7 @@ namespace Class_libray_421
 
             for (int i = 0; i < mes3Des.Count; i++)
             {
-                lesDes += " Le Dé n°"+(i+1)+"="+  mes3Des[i];
+                lesDes += " Le Dé n°"+(i+1)+"= "+  mes3Des[i];
             }
 
             return lesDes;
