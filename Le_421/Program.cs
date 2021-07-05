@@ -15,10 +15,7 @@ namespace Le_421
             Console.WriteLine("Combien de manches dans votre Partie 421 ?");
             nbrmanche = int.Parse(Console.ReadLine());
             Partie mapartie = new Partie(nbrmanche);
-            
             Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
-
-            
 
             for (int i = 0; i < nbrmanche; i++)
             {
