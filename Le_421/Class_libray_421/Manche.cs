@@ -34,15 +34,24 @@ namespace Class_libray_421
 
         public void Lancer(int numeroDe1, int numeroDe2)
         {
-            mes3Des[numeroDe1].SeJeter();
-            mes3Des[numeroDe2].SeJeter();
+            mes3Des[numeroDe1-1].SeJeter();
+            mes3Des[numeroDe2-1].SeJeter();
+            nbLancerCourant++;
+            TrierLesDes();
+        }
+
+        public void Lancer(int numeroDe1, int numeroDe2,int numeroDe3)
+        {
+            mes3Des[numeroDe1-1].SeJeter();
+            mes3Des[numeroDe2-1].SeJeter();
+            mes3Des[numeroDe3-1].SeJeter();
             nbLancerCourant++;
             TrierLesDes();
         }
 
         public void Lancer(int numeroDe)
         {
-            mes3Des[numeroDe].SeJeter();
+            mes3Des[numeroDe-1].SeJeter();
             nbLancerCourant++;
             TrierLesDes();
         }

@@ -54,6 +54,12 @@ namespace Class_libray_421
             
         }
 
+        public void Lancer(int _numde, int _numde2,int _numde3)
+        {
+            this.maMancheCourante.Lancer(_numde, _numde2, _numde3);
+        }
+
+
         public void Lancer(int _numde,int _numde2)
         {
             this.maMancheCourante.Lancer(_numde,_numde2);
@@ -89,6 +95,22 @@ namespace Class_libray_421
         public bool AEncoreUnLance()
         {
             return this.maMancheCourante.AEncoreUnLance();
+        }
+
+        public List<int> SaisieDesNumdeDe(string textesaisi)
+        {
+            List<int>value = new List<int>();
+            string[] valeurs = textesaisi.Split(new char[] { ' ',',','/' }) ;
+            
+            
+            foreach(string item in valeurs)
+            {
+                int valeurconvertit= Convert.ToInt32(item);
+                value.Add(valeurconvertit);
+            }
+
+            return value;
+            
         }
     }
 }

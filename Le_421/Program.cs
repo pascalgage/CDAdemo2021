@@ -31,42 +31,15 @@ namespace Le_421
                 Console.WriteLine(mapartie.RenvoieUneRepresentationDesDes());
 
                 while (mapartie.AEncoreUnLance() == true)
-            {
-                int numDe;
-                int numdebis;
-                int combiendeDé;
-                Console.WriteLine("Combien de dés souhaitez-vous relancer ?");
-                combiendeDé = int.Parse(Console.ReadLine());
-                
+                {
+              
+                    string numdebis;
 
-
-                    if (combiendeDé == 3)
-                    {
-                        mapartie.LancerLes3Des();
-                    }
-                    else if (combiendeDé == 2)
-                    {
-                        Console.WriteLine("Quel dé à relancer ?");
-                        numDe = int.Parse(Console.ReadLine());
-                        
-                        Console.WriteLine("Quel dé à relancer ?");
-                        numdebis = int.Parse(Console.ReadLine());
-                        mapartie.Lancer(numDe - 1,numdebis-1);
-                    }
-                    else if (combiendeDé == 1)
-                    {
-                        Console.WriteLine("Quel dé à relancer ?");
-                        numDe = int.Parse(Console.ReadLine());
-
-                        mapartie.Lancer(numDe - 1);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Erreur de saisie !!!");
-                    }
-                    Console.WriteLine(mapartie.RenvoieUneRepresentationDesDes());
-
-
+                    Console.WriteLine("Quel(s) dé(s) souhaitez-vous relancer ? Tapez le numéro du ou des dé(s) séparé par une virgule");
+                    numdebis = (Console.ReadLine());
+                    List<int> result = mapartie.SaisieDesNumdeDe(numdebis);
+                    AnalyseSaisieUtilisateur(result,mapartie);
+                    
                     if (mapartie.AGagneLaManche() == true)
                     {
                         Console.WriteLine("Chapeau Bas ! BRavo c'est421 !!!");
@@ -74,10 +47,8 @@ namespace Le_421
                         mapartie.LancerLes3Des();
                         Console.WriteLine(mapartie.RenvoieUneRepresentationDesDes());
                         Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
-                       
-                    }
-                    
 
+                    }
                 }
                 mapartie.MancheJoueePerdue();
                 Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
@@ -87,7 +58,7 @@ namespace Le_421
                 {
                     Console.WriteLine("Partie Terminée, au revoir !");
                 }
-                else if (mapartie.ScoreCourant >0 && mapartie.NombreDeMancheJoue==nbrmanche)
+                else if (mapartie.ScoreCourant > 0 && mapartie.NombreDeMancheJoue == nbrmanche)
                 {
                     Console.WriteLine("Bravo PARTIE GAGNEE !!!");
                     Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
@@ -98,6 +69,28 @@ namespace Le_421
                 }
             }
             Console.ReadKey();
-        }       
+        }
+        public static void AnalyseSaisieUtilisateur(List<int> _maliste, Partie _mapartie)
+        {
+
+            
+
+            if (_maliste.Count == 3)
+            {
+                _mapartie.Lancer(_maliste[0], _maliste[1], _maliste[2]);
+                Console.WriteLine(_mapartie.RenvoieUneRepresentationDesDes());
+            }
+            else if (_maliste.Count == 2)
+            {
+                _mapartie.Lancer(_maliste[0], _maliste[1]);
+                Console.WriteLine(_mapartie.RenvoieUneRepresentationDesDes());
+            }
+            else if (_maliste.Count == 1)
+            {
+                _mapartie.Lancer(_maliste[0]);
+                Console.WriteLine(_mapartie.RenvoieUneRepresentationDesDes());
+            }
+        }
+
     }
 }
