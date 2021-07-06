@@ -35,7 +35,7 @@ namespace Le_421
               
                     string numdebis;
 
-                    Console.WriteLine("Quel(s) dé(s) souhaitez-vous relancer ? Tapez le numéro du ou des dé(s) séparé par une virgule");
+                    Console.WriteLine("Quel(s) dé(s) souhaitez-vous relancer ? Tapez le numéro du ou des dé(s) séparé par une virgule,ou un espace:");
                     numdebis = (Console.ReadLine());
                     List<int> result = mapartie.SaisieDesNumdeDe(numdebis);
                     AnalyseSaisieUtilisateur(result,mapartie);
@@ -70,11 +70,9 @@ namespace Le_421
             }
             Console.ReadKey();
         }
+
         public static void AnalyseSaisieUtilisateur(List<int> _maliste, Partie _mapartie)
         {
-
-            
-
             if (_maliste.Count == 3)
             {
                 _mapartie.Lancer(_maliste[0], _maliste[1], _maliste[2]);

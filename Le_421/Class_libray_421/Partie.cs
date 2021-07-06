@@ -100,7 +100,7 @@ namespace Class_libray_421
         public List<int> SaisieDesNumdeDe(string textesaisi)
         {
             List<int>value = new List<int>();
-            string[] valeurs = textesaisi.Split(new char[] { ' ',',','/' }) ;
+            string[] valeurs = textesaisi.Split(new char[]{ ' ',',','/'}) ;
             
             
             foreach(string item in valeurs)
