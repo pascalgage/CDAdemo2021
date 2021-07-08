@@ -1,7 +1,9 @@
 ﻿using Class_libray_421;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,11 +13,20 @@ namespace Le_421
     {
         static void Main(string[] args)
         {
+            //Création du nom du joueur....
+            string nomjoueur;
+            LesJoueurs listef = new LesJoueurs();
+            Console.WriteLine("Entrez le nom du joueur:");
+            nomjoueur = Console.ReadLine();
+            //Demande du nombre de manches...
             int nbrmanche;
             Console.WriteLine("Combien de manches dans votre Partie 421 ?");
             nbrmanche = int.Parse(Console.ReadLine());
             Partie mapartie = new Partie(nbrmanche);
             Console.WriteLine("Votre score est de : " + mapartie.ScoreCourant);
+            //Score du joueur ajouter à la liste...
+            int scorejoueur=mapartie.ScoreCourant;
+            listef.AjouterUnJoueur(nomjoueur, scorejoueur);
 
             for (int i = 0; i < nbrmanche; i++)
             {
@@ -68,6 +79,14 @@ namespace Le_421
                     Console.WriteLine("Bravo PARTIE GAGNEE !!!");
                 }
             }
+            //Serialization....de l'objet créer en début de programme: listef
+            BinaryFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("C:\\1CDA\\CDAdemo2021\\Le_421\\Paskytest.txt", FileMode.Create, FileAccess.Write);
+
+            formatter.Serialize(stream, listef);
+            stream.Close();
+            /// fin de la sérialization
+            
             Console.ReadKey();
         }
 
