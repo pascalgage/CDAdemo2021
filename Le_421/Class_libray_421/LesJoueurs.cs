@@ -10,30 +10,33 @@ namespace Class_libray_421
 
     public class LesJoueurs:List<Joueur> 
     {
-        private List<Joueur> mesJoueurs;
-   
+       
+
+
+
 
         //Constructeur classique...
 
         public LesJoueurs(List<Joueur> _listeJoueurs)
         {
-            this.mesJoueurs = _listeJoueurs;
+            this.AddRange(_listeJoueurs);
     
         }
 
         //Constructeur par défaut...
 
-        public LesJoueurs()
+        public LesJoueurs():base()
         {
-            mesJoueurs = new List<Joueur>();
+           
         }
 
         //Méthodes...
         public void AjouterUnJoueur(string _nom, int _score)
         {
             Joueur p = new Joueur(_nom, _score);
-            this.mesJoueurs.Add(p);
+            this.Add(p);
         }
+        
 
 
     }

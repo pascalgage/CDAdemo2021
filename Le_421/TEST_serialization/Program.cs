@@ -19,15 +19,15 @@ namespace TEST_serialization
             listeG.AjouterUnJoueur("POLO", 22500);
 
 
-            BinaryFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("C:\\1CDA\\CDAdemo2021\\Le_421\\SERIALIZEtest.txt", FileMode.Create, FileAccess.Write);
+            //BinaryFormatter formatter = new BinaryFormatter();
+            //Stream stream = new FileStream("C:\\1CDA\\CDAdemo2021\\Le_421\\SERIALIZEtest.txt", FileMode.Create, FileAccess.Write);
 
-            formatter.Serialize(stream, listeG);
-            stream.Close();
+            //formatter.Serialize(stream, listeG);
+            //stream.Close();
 
-            stream = new FileStream("C:\\1CDA\\CDAdemo2021\\Le_421\\SERIALIZEtest.txt", FileMode.Open, FileAccess.Read);
-            LesJoueurs ListeG = (LesJoueurs)formatter.Deserialize(stream);
-            Console.WriteLine(ListeG);
+            //stream = new FileStream("C:\\1CDA\\CDAdemo2021\\Le_421\\SERIALIZEtest.txt", FileMode.Open, FileAccess.Read);
+            //LesJoueurs ListeG = (LesJoueurs)formatter.Deserialize(stream);
+            //Console.WriteLine(ListeG);
 
             Console.ReadKey();
 

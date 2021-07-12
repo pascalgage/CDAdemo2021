@@ -28,6 +28,16 @@ namespace Le_421
             int scorejoueur=mapartie.ScoreCourant;
             listef.AjouterUnJoueur(nomjoueur, scorejoueur);
 
+            Serialization.Sauvegarder(listef);
+
+            List<Joueur> ma_liste= Serialization.Ouvrir();
+
+            for (int i = 0; i < ma_liste.Count; i++)
+            {
+                Console.WriteLine(" NOM : " + ma_liste[i].Nom + " SCORE : " + ma_liste[i].Score);
+            }
+
+
             for (int i = 0; i < nbrmanche; i++)
             {
                 Console.WriteLine("MANCHE " + (i + 1));
@@ -80,13 +90,14 @@ namespace Le_421
                 }
             }
             //Serialization....de l'objet créer en début de programme: listef
-            BinaryFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("C:\\1CDA\\CDAdemo2021\\Le_421\\Paskytest.txt", FileMode.Create, FileAccess.Write);
+            //BinaryFormatter formatter = new BinaryFormatter();
+            //Stream stream = new FileStream("C:\\1CDA\\CDAdemo2021\\Le_421\\Paskytest.txt", FileMode.Create, FileAccess.Write);
 
-            formatter.Serialize(stream, listef);
-            stream.Close();
+            //formatter.Serialize(stream, listef);
+            //stream.Close();
             /// fin de la sérialization
-            
+          
+
             Console.ReadKey();
         }
 

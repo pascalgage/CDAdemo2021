@@ -12,6 +12,9 @@ namespace Class_libray_421
         private string nom;
         private int score;
 
+        public string Nom { get => nom; }
+        public int Score { get => score; }
+
         //Constructeur classique...
         public Joueur(string _nom, int _score)
         {
@@ -23,6 +26,11 @@ namespace Class_libray_421
         {
             nom = "Julien";
             score = 100;
+        }
+
+        public override string ToString()
+        {
+            return "NOM:" + this.Nom + "SCORE:" + Score;
         }
     }
 }
