@@ -17,15 +17,22 @@ namespace P_Bouteille
             mabouteille = new Bouteille();
 
             mabouteille.Ouvrir();
+            
             mabouteille.RemplirTout();
-            mabouteille.Vider(30);
+
+            mabouteille.ViderTout();
+
+            mabouteille.Remplir(25);
+
+            mabouteille.Vider(5);
+
             mabouteille.Fermer();
+
+            mabouteille.ViderTout();
+
             mabouteille.Ouvrir();
 
-            mabouteille.Remplir(29);
-            mabouteille.Remplir(1);
-            
-            
+            mabouteille.ViderTout();
 
             Console.WriteLine(mabouteille.ToString());
 

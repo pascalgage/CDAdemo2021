@@ -13,11 +13,11 @@ namespace ClassesVOITURETH
         public int NbCV { get => nbCV; }
 
         //constructeur par défaut
-        public Moteur()
-		{
-			estDemarre = false;
-			nbCV = 4;
-		}
+  //      public Moteur()
+		//{
+		//	estDemarre = false;
+		//	nbCV = 4;
+		//}
 	
 		//constructeur classique
 		public Moteur(bool estDemarre, int nbCV)
@@ -26,12 +26,32 @@ namespace ClassesVOITURETH
 			this.nbCV = nbCV;
 		}
         //constructeur par clonage
-        public Moteur(Moteur _cloneMoteur)
+        //public Moteur(Moteur _cloneMoteur)
+        //{
+        //    estDemarre = _cloneMoteur.estDemarre;
+        //    nbCV = _cloneMoteur.nbCV;
+        //}
+		//constructeur par défaut par interdépendance
+		public Moteur()
+			: this(false,4)
         {
-            estDemarre = _cloneMoteur.estDemarre;
-            nbCV = _cloneMoteur.nbCV;
+			//estDemarre = false;
+			//nbCV = 4;
         }
-	
+		//constructeur par clonage par interdépendance
+		public Moteur(Moteur _moteur_arecopie)
+			:this (_moteur_arecopie.estDemarre,_moteur_arecopie.nbCV)
+        {
+			//estDemarre = _moteur_arecopie.estDemarre;
+			//nbCV = _moteur_arecopie.nbCV;
+        }
+		//contructeur mi-défaut mi-classique par interdépendance
+		public Moteur(int _nbCV)
+			: this(false,_nbCV)
+        {
+			//this.estDemarre = false;
+			//this.nbCV = _nbCV;
+        }
 
         public bool Demarrer()
 		{
