@@ -17,8 +17,10 @@ namespace ClassesVOITURETH
 		private List<Roue> mesRoues;
 
         public Moteur SonMoteur { get => sonMoteur;  }
-        public int CompteurEnKM { get => compteurEnKM; }
-        public List<Roue> MesRoues { get => mesRoues;}
+		public int CompteurEnKM { get => compteurEnKM; }
+		public List<Roue> MesRoues { get => mesRoues;}
+       
+
 
 
         //constructeur par défaut
