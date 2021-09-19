@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibraryVOITURE;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace COMPOSITION_OBJET
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Roue ma_roue1 = new Roue();
+            Moteur rsv50 = new Moteur();
+            Roue mk50 = new Roue();
+            
+            Vehicule maFerrari = new Vehicule("Ferrari");
         }
     }
 }

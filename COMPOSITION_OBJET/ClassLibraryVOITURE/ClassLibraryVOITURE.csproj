@@ -45,6 +45,7 @@
     <Compile Include="Moteur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roue.cs" />
+    <Compile Include="Vehicule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,7 +9,7 @@ namespace ClassesVOITURETH
 {
 	public class Voiture
 	{
-		//Attributs...
+		//Attributs... 
 		private int compteurEnKM;
 		
 		private Moteur sonMoteur;
