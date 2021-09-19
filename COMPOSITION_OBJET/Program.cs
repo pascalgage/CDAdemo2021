@@ -10,6 +10,7 @@ namespace COMPOSITION_OBJET
     {
         static void Main(string[] args)
         {
+            Roue ma_roue1 = new Roue();
         }
     }
 }

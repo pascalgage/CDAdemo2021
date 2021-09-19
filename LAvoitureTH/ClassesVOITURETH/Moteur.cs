@@ -52,7 +52,7 @@ namespace ClassesVOITURETH
 			//this.estDemarre = false;
 			//this.nbCV = _nbCV;
         }
-
+		//Méthodes...
         public bool Demarrer()
 		{
 			bool aReussiADEMarrer = false;

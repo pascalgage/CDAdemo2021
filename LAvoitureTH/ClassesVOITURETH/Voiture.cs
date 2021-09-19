@@ -9,13 +9,15 @@ namespace ClassesVOITURETH
 {
 	public class Voiture
 	{
-
+		//Attributs...
 		private int compteurEnKM;
 		
 		private Moteur sonMoteur;
 
 		private List<Roue> mesRoues;
 
+
+		//gettters
         public Moteur SonMoteur { get => sonMoteur;  }
 		public int CompteurEnKM { get => compteurEnKM; }
 		public List<Roue> MesRoues { get => mesRoues;}

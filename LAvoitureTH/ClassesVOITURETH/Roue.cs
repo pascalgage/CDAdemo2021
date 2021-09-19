@@ -32,7 +32,7 @@ namespace ClassesVOITURETH
 			tourne = _roueACopier.tourne;
 		}
 		
-
+		//Méthodes...
 		public bool Tourner()
 		{
 			bool aReussiAMettreEnRotation = false;
