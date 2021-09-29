@@ -11,32 +11,17 @@ namespace P_Bouteille
     {
         static void Main(string[] args)
         {
+
+            Bouteille b = new Bouteille();
+            b.Estouvertpourlapremierefois += B_Estouvertpourlapremierefois;
             
-
-            Bouteille mabouteille;
-            mabouteille = new Bouteille();
-
-            mabouteille.Ouvrir();
-            
-            mabouteille.RemplirTout();
-
-            mabouteille.ViderTout();
-
-            mabouteille.Remplir(25);
-
-            mabouteille.Vider(5);
-
-            mabouteille.Fermer();
-
-            mabouteille.ViderTout();
-
-            mabouteille.Ouvrir();
-
-            mabouteille.ViderTout();
-
-            Console.WriteLine(mabouteille.ToString());
 
             Console.ReadKey();
+        }
+
+        private static void B_Estouvertpourlapremierefois(decimal _contenanceEnL)
+        {
+            Console.WriteLine("glouglou");
         }
     }
 }

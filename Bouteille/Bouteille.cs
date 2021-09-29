@@ -13,6 +13,12 @@ namespace NS_Bouteille
 		private decimal contenuEnPourcentage;
 		private bool ouvert;
 
+		public delegate void DelegateEstouvertlapremierefois(decimal _contenanceEnL);
+		public event DelegateEstouvertlapremierefois Estouvertpourlapremierefois;
+
+
+
+
 		//propriétés....
 		public decimal ContenanceEnL
         {
