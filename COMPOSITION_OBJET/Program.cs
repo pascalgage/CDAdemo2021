@@ -15,6 +15,8 @@ namespace COMPOSITION_OBJET
             Roue mk50 = new Roue();
             
             Vehicule maFerrari = new Vehicule("Ferrari");
+
+            Console.ReadKey();
         }
     }
 }

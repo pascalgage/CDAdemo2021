@@ -13,7 +13,7 @@ namespace ClassLibraryVOITURE
         private string marque;
         private Moteur sonMoteur;
         private List<Roue> sesRoues;
-        private string v;
+        
 
         //Propriétés...
         public string Marque { get => marque; }
@@ -49,9 +49,6 @@ namespace ClassLibraryVOITURE
             this.sesRoues[3] = new Roue();
         }
 
-        public Vehicule(string v)
-        {
-            this.v = v;
-        }
+       
     }
 }
