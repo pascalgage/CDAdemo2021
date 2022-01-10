@@ -12,8 +12,6 @@ namespace CodeFizz
         {
 
 
-
-
             for(int i = 0; i < maListe.Count; i++)
             {
                 if(maListe[i]%5==0 && maListe[i] % 3 == 0)
@@ -31,6 +29,8 @@ namespace CodeFizz
                     Console.WriteLine(maListe[i]);
                 }
             }
+
+
 
         }
     }
