@@ -11,7 +11,9 @@ namespace CodeFizz
     {
         static void Main(string[] args)
         {
-            List<int> nombres = new List<int>();
+            /*List<int> nombres = new List<int>();
+            
+
             int nombre=0;
             bool finish = true;
             string decision = "n";
@@ -29,9 +31,15 @@ namespace CodeFizz
                 {
                     finish = true;
                     Calcul.Fizzbuzz(nombres);
-;
+
                 }
-            }
+            }*/
+
+            List<int> nombres = Calcul.KreaList(100);
+            Calcul.Fizzbuzz(nombres);
+            
+            
+
             Console.ReadKey();
             
             

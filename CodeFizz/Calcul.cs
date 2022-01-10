@@ -33,5 +33,15 @@ namespace CodeFizz
 
 
         }
+        public static List<int> KreaList(int max)
+        {
+            List<int> liste = new List<int>();
+
+            for(int i=1; i <= max; i++)
+            {
+                liste.Add(i);
+            }
+            return liste;
+        }
     }
 }
