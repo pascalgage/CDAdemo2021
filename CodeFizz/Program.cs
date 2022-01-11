@@ -11,7 +11,7 @@ namespace CodeFizz
     {
         static void Main(string[] args)
         {
-            /*List<int> nombres = new List<int>();
+            List<int> nombres = new List<int>();
             
 
             int nombre=0;
@@ -33,10 +33,14 @@ namespace CodeFizz
                     Calcul.Fizzbuzz(nombres);
 
                 }
-            }*/
+            }
 
-            List<int> nombres = Calcul.KreaList(100);
-            Calcul.Fizzbuzz(nombres);
+            int limite = 0;
+
+            Console.WriteLine("Jusqu'à combien souhaitez-vous allez ?");
+            limite = int.Parse(Console.ReadLine());
+            List<int> dnombres = Calcul.KreaList(limite);
+            Calcul.Fizzbuzz(dnombres);
             
             
 
