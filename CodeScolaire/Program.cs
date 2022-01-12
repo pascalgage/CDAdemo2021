@@ -35,7 +35,7 @@ namespace CodeScolaire
                 Console.WriteLine(table * i);
             }*/
 
-            int nbr = 0;
+            /*int nbr = 0;
             int result = 0;
             Console.WriteLine("Donnez votre nombre de départ: ");
             nbr = int.Parse(Console.ReadLine());
@@ -44,7 +44,25 @@ namespace CodeScolaire
             {
                 result +=i;
             }
-            Console.WriteLine(result);
+            Console.WriteLine(result);*/
+
+            int nbr = 0;
+            
+            Console.WriteLine("Veuillez entrer votre nombre:");
+            nbr = int.Parse(Console.ReadLine());
+
+            int exp = nbr;
+            int result = nbr;
+
+            while (exp != 1)
+            {
+                
+                exp--;
+                result = result * exp;
+            }
+
+            Console.WriteLine("La factorielle de "+nbr+" est " + result);
+
 
             Console.ReadKey();
         }
