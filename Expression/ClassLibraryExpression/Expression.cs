@@ -15,6 +15,11 @@ namespace ClassLibraryExpression
 
         public abstract int Evalue();
         public abstract string Formate();
+        public abstract string LeftFormate();
+        public string Sformate()
+        {
+            return LeftFormate() + "=" + Evalue();
+        }
         
 
             

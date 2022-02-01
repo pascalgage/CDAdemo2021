@@ -25,5 +25,10 @@ namespace ClassLibraryExpression
         {
             return nombre.ToString();
         }
+
+        public override string LeftFormate()
+        {
+            return nombre.ToString();
+        }
     }
 }

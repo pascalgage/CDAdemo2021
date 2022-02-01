@@ -23,5 +23,10 @@ namespace ClassLibraryExpression
             //return Leftoperand.ToString()+"+"+Rightoperand.ToString()+"="+ new Soustraction(Leftoperand,Rightoperand);
             return Leftoperand.Formate();
         }
+
+        public override string LeftFormate()
+        {
+            return (Leftoperand.LeftFormate() + "-" + Rightoperand.LeftFormate());
+        }
     }
 }

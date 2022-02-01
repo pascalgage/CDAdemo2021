@@ -24,9 +24,13 @@ namespace ClassLibraryExpression
 
         public override string Formate()
         {
-            return (Leftoperand.Formate() + "+" + Rightoperand.Formate()) +Formate2();
+            return Leftoperand.Evalue() + "+" + Rightoperand.Evalue();
         }
 
+        public override string LeftFormate()
+        {
+            return (Leftoperand.LeftFormate() + "+" + Rightoperand.LeftFormate());
+        }
 
 
         //public override string Formate()
@@ -36,7 +40,7 @@ namespace ClassLibraryExpression
 
         public string Formate2()
         {
-            return new Addition(Leftoperand,Rightoperand).Evalue().ToString();
+            return new Addition(Leftoperand,Rightoperand).LeftFormate();
         }
     }
 }
