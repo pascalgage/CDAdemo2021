@@ -12,7 +12,7 @@ namespace _2nbr_aet_b
         {
             double a;
             double b;
-            double c;
+            
 
             Console.WriteLine("Entrez un nombre a:");
             a = double.Parse(Console.ReadLine());
